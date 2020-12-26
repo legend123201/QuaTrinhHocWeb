@@ -1,0 +1,54 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input {
+	border: none;
+	outline: none;
+}
+
+button {
+	border: none;
+	outline: none;
+	background: none;
+}
+
+select {
+	border: none;
+	outline: none;
+}
+
+@media (min-width: 1200px) {
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+}
+
+@media (max-width: 1199px) {
+
+.container {
+	width: 94%;
+	margin: 0 auto;
+}
+
+}
+

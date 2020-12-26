@@ -1,0 +1,41 @@
+@import "flex";
+
+.form-login {
+    height: 100vh;
+    background-color: gray;
+    
+    form {
+        width: 500px;
+        background-color: white;
+        padding: 30px;
+        .input-group {
+            input {
+                display: block;
+                width: 100%;
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 15px;
+                
+            }
+
+            label {
+                font-size: 30px;
+            }
+            .eror{
+                //display: none;
+                color: red;
+            }
+        }
+        button{
+            margin-top: 20px;
+            padding: 15px 30px;
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+            &:hover{
+                background-color: orange;
+                color: black;
+            }
+        }
+    }
+}

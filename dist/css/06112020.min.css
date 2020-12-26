@@ -1,0 +1,1 @@
+img{max-width:100%}.row{display:flex;flex-wrap:wrap}.row .col{width:50%}.blue{background-color:#00f}.red{background-color:red}@media (min-width:1000px){h1{color:#ff0}.row .col{width:33.3333%}}@media (max-width:800px){.row .col{width:100%}body,html{font-size:12px}}@media (max-width:600px){h1{color:red}}

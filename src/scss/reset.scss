@@ -1,0 +1,58 @@
+@import "media";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    //cần dòng ở dưới vì một số tấm hình bỏ border vào bị dư khoảng trắng
+    &::after,
+    &::before {
+        box-sizing: border-box;
+    }
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    // background-color: yellow;
+    // @include xs {
+    //     width: 97%;
+    // }
+    // @include sm {
+    //     padding: 0 15px;
+    // }
+    // @include md {
+    //     width: 95%;
+    // }
+    @media (max-width:1199px) {
+        width: 94%; //xài grid thì có margin số âm, nó sẽ lòi ra khỏi container, nên cho width container nhỏ lại chút
+        margin: 0 auto;
+    }
+    @include xl {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+input {
+    outline: none; //là cái border sẽ chuyển thành màu xanh khi đang nhập
+    border: none; //bỏ đi cái border để tự cấu hình
+}
+
+button {
+    outline: none; //click vào sẽ thấy màu xanh xanh xung quanh, nhưng nó ko phải border
+    border: none;
+    background: none; //bg ban đầu màu xám nhẹ
+}
+
+select {
+    outline: none;
+    border: none;
+}

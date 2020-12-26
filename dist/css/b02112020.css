@@ -1,0 +1,97 @@
+.row {
+	display: flex;
+	margin: -25px;
+	flex-wrap: wrap;
+}
+
+.row .col-1 {
+	width: 8.33333%;
+	padding: 25px;
+	border: 2px solid magenta;
+}
+
+.row .col-2 {
+	width: 16.66667%;
+	padding: 25px;
+	border: 2px solid magenta;
+}
+
+.row .col-3 {
+	width: 25%;
+	padding: 25px;
+	border: 2px solid magenta;
+}
+
+.row .col-4 {
+	width: 33.33333%;
+	padding: 25px;
+	border: 2px solid magenta;
+}
+
+.row .col-5 {
+	width: 41.66667%;
+	padding: 25px;
+	border: 2px solid magenta;
+}
+
+.row .col-6 {
+	width: 50%;
+	padding: 25px;
+	border: 2px solid magenta;
+}
+
+.row .col-7 {
+	width: 58.33333%;
+	padding: 25px;
+	border: 2px solid magenta;
+}
+
+.row .col-8 {
+	width: 66.66667%;
+	padding: 25px;
+	border: 2px solid magenta;
+}
+
+.row .col-9 {
+	width: 75%;
+	padding: 25px;
+	border: 2px solid magenta;
+}
+
+.row .col-10 {
+	width: 83.33333%;
+	padding: 25px;
+	border: 2px solid magenta;
+}
+
+.row .col-11 {
+	width: 91.66667%;
+	padding: 25px;
+	border: 2px solid magenta;
+}
+
+.row .col-12 {
+	width: 100%;
+	padding: 25px;
+	border: 2px solid magenta;
+}
+
+html,
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container .test {
+	width: 500px;
+	border: 1px solid red;
+	background-color: chartreuse;
+}
+
+.container {
+	border: 1px solid black;
+}
+
+.products .item {
+	border: 1px solid red;
+}
+

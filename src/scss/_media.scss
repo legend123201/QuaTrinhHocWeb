@@ -1,0 +1,41 @@
+//576
+//768
+//992
+//1200
+
+// xs = extra small < 576
+// sm = small < 768
+// md = medium < 992
+// lg = large < 1200
+// xl = extra large >= 1200
+
+//chỉ có cái đầu là max-width, những cái sau là min-width để ví dụ khi cấu hình cho md, nhưng ko có lg, xl, thì cứ màn hình lớn hơn md thì vẫn sẽ có cấu hình đó 
+@mixin xs {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}

@@ -1,0 +1,1 @@
+*{box-sizing:border-box;margin:0;padding:0}::after,::before{box-sizing:border-box}ol,ul{list-style:none}a{text-decoration:none}input{border:none;outline:0}button{border:none;outline:0;background:0 0}select{border:none;outline:0}@media (min-width:1200px){.container{width:1200px;margin:0 auto}}@media (max-width:1199px){.container{width:94%;margin:0 auto}}

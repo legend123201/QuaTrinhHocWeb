@@ -1,0 +1,24 @@
+.item {
+	width: 35vw;
+	margin: 20px;
+	border: 1px solid black;
+}
+
+.item img {
+	width: 100%;
+}
+
+.item p,
+.item h1 {
+	padding: 10px;
+}
+
+.item h1 {
+	font-size: 25px;
+}
+
+.bg-grey {
+	color: #fc9;
+	background-color: grey;
+}
+

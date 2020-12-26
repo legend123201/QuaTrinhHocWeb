@@ -1,0 +1,114 @@
+.flex {
+	display: flex;
+}
+
+.container {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.footer {
+	width: 700px;
+	padding: 10px;
+	background-color: black;
+}
+
+.footer h2 {
+	margin-bottom: 10px;
+	padding: 10px;
+	color: white;
+	border-bottom: 1px solid gray;
+}
+
+.footer .about {
+	width: 60%;
+	margin-right: 20px;
+}
+
+.footer .nav {
+	width: 40%;
+}
+
+.footer .nav .links {
+	justify-content: space-between;
+}
+
+.footer .nav .links ul li {
+	margin-bottom: 10px;
+}
+
+.footer p,
+.footer a {
+	color: gray;
+}
+
+.form {
+	margin-top: 30px;
+}
+
+.form h2 {
+	text-align: center;
+}
+
+.form h2 span {
+	color: red;
+}
+
+.form .logo {
+	height: 250px;
+}
+
+.form .header {
+	height: 350px;
+}
+
+.form .siteplan {
+	height: 300px;
+}
+
+.form .logo,
+.form .header,
+.form .siteplan,
+.form li,
+.form .about,
+.form .quickLinks1,
+.form .quickLinks2 {
+	display: flex;
+	margin-top: 20px;
+	background-color: gray;
+	justify-content: center;
+	align-items: center;
+}
+
+.form nav ul {
+	justify-content: space-between;
+}
+
+.form nav ul li {
+	width: 250px;
+	height: 50px;
+}
+
+.form .content {
+	height: 600px;
+}
+
+.form .content .about {
+	width: 60%;
+	margin-right: 30px;
+}
+
+.form .content .quickLinks {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+}
+
+.form .content .quickLinks1 {
+	height: 50%;
+}
+
+.form .content .quickLinks2 {
+	height: 50%;
+}
+

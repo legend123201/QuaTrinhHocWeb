@@ -1,0 +1,473 @@
+.flex {
+	display: flex;
+}
+
+.j-between {
+	justify-content: space-between;
+}
+
+.j-around {
+	justify-content: space-around;
+}
+
+.j-center {
+	justify-content: center;
+}
+
+.a-center {
+	align-items: center;
+}
+
+.a-start {
+	align-items: flex-start;
+}
+
+.a-end {
+	align-items: flex-end;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-startpage {
+	height: 700px;
+	background: url(../img/banner-3.jpg) no-repeat top center/cover;
+}
+
+.header-startpage header {
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	padding-top: 20px;
+	color: white;
+}
+
+.header-startpage header .container nav > ul > li {
+	margin-left: 25px;
+}
+
+.header-startpage header .container nav > ul > li a {
+	color: white;
+}
+
+.header-startpage header .container nav > ul > li a:hover {
+	color: red;
+}
+
+.header-startpage header .container nav > ul > li i:hover {
+	color: red;
+}
+
+.header-startpage header .container nav > ul > li > ul {
+	width: 200px;
+	border: 1px solid white;
+	background-color: black;
+}
+
+.header-startpage header .container nav > ul > li > ul.dropdown {
+	position: absolute;
+	display: none;
+}
+
+.header-startpage header .container nav > ul > li > ul.dropdown li {
+	padding: 13px 10px;
+}
+
+.header-startpage header .container nav > ul > li:hover .dropdown {
+	display: block;
+}
+
+.header-startpage .header-content {
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	margin-top: 100px;
+	color: white;
+}
+
+.header-startpage .header-content .content span {
+	font-size: 10px;
+	display: block;
+}
+
+.header-startpage .header-content .content .title {
+	font-size: 60px;
+	margin-top: 80px;
+}
+
+.header-startpage .header-content .content .content-icons {
+	margin-top: 80px;
+}
+
+.header-startpage .header-content .content .content-icons .icon-item {
+	margin-right: 50px;
+}
+
+.header-startpage .header-content .content .content-icons .icon-item .icon {
+	display: flex;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: white;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-startpage .header-content .content .content-icons .icon-item .icon i {
+	font-size: 30px;
+	color: blue;
+}
+
+.header-startpage .header-content .content .content-icons .icon-item .icon-item-content {
+	padding: 10px;
+}
+
+.header-startpage .header-content .content .content-icons .icon-item .icon-item-content a {
+	font-size: 25px;
+	color: white;
+}
+
+.session2 {
+	padding: 80px 0;
+	border-bottom: 1px solid black;
+}
+
+.session2 ul li a img {
+	width: 150px;
+	height: 50px;
+}
+
+.session3 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.session3 .container .session2-item {
+	margin: 90px 0;
+}
+
+.session3 .container .session2-item .item-content h2 {
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+
+.session3 .container .session2-item .item-content p {
+	margin-bottom: 40px;
+	color: gray;
+}
+
+.session3 .container .session2-item .item-content ul li {
+	margin-bottom: 20px;
+	color: gray;
+}
+
+.session3 .container .session2-item .item-content ul li i {
+	margin-right: 10px;
+	color: blue;
+}
+
+.session3 .container .session2-item .item-content a {
+	color: black;
+}
+
+.session3 .container .session2-item .item-content a:hover {
+	color: red;
+}
+
+.session3 .container .session2-item .image-item2 {
+	margin-right: 40px;
+}
+
+.session3 .container .session2-item .image-item2 img {
+	width: 550px;
+	height: 350px;
+}
+
+.session3 .container .session2-item .item-image img {
+	width: 550px;
+	height: 350px;
+}
+
+.session4 {
+	padding: 60px;
+	color: white;
+	background-color: blue;
+}
+
+.session4 .item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.session4 .item .number {
+	font-size: 60px;
+}
+
+.session4 .item .word {
+	font-size: 20px;
+}
+
+.session4 .item.middle {
+	padding: 20px 90px;
+	border-right: 1px solid rgba(255, 255, 255, .4);
+	border-left: 1px solid rgba(255, 255, 255, .4);
+}
+
+.session5 {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	height: 350px;
+	color: white;
+	background: url(https://demo.w3layouts.com/demosWTR/Freedom/01-11-2019/franchisor-freedom-demo_Free/632254492/web/assets/images/content_4.jpg) no-repeat top center/cover;
+	align-items: center;
+}
+
+.session5::after {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background: rgba(0, 0, 0, .6);
+}
+
+.session5 .container .part1 {
+	width: 400px;
+}
+
+.session5 .container .part1 .title {
+	font-size: 12px;
+	padding-bottom: 40px;
+}
+
+.session5 .container .part1 .content {
+	font-size: 20px;
+}
+
+.session5 .container .part2 {
+	width: 800px;
+	padding-left: 150px;
+}
+
+.session5 .container .part2 p {
+	font-size: 35px;
+}
+
+.session5 .container .part2 a {
+	font-size: 20px;
+	display: block;
+	padding-top: 50px;
+	color: white;
+}
+
+.session5 .container .part2 a:hover {
+	color: red;
+}
+
+.session6 .container .title {
+	width: 600px;
+	margin: 90px auto;
+	text-align: center;
+}
+
+.session6 .container .title p {
+	color: gray;
+}
+
+.session6 .container .content {
+	margin-bottom: 20px;
+}
+
+.session6 .container .content .content-item {
+	width: 350px;
+	border: 1px solid gray;
+}
+
+.session6 .container .content .content-item .item-image img {
+	width: 100%;
+}
+
+.session6 .container .content .content-item .item-content {
+	padding: 30px 40px;
+	text-align: center;
+}
+
+.session6 .container .content .content-item .item-content h3 {
+	font-size: 21px;
+	margin-bottom: 18px;
+}
+
+.session6 .container .content .content-item .item-content p {
+	color: gray;
+}
+
+.session7 {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	height: 400px;
+	margin: 50px 0;
+	color: white;
+	background: url(https://demo.w3layouts.com/demosWTR/Freedom/01-11-2019/franchisor-freedom-demo_Free/632254492/web/assets/images/customer_bg.jpg) no-repeat center/cover;
+	justify-content: center;
+}
+
+.session7::before {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background-color: rgba(0, 0, 255, .5);
+}
+
+.session7 .container .content {
+	font-size: 30px;
+	font-weight: bolder;
+}
+
+.session7 .container .worker-info {
+	margin-top: 50px;
+}
+
+.session7 .container .worker-info .image {
+	margin-right: 20px;
+}
+
+.session7 .container .worker-info .image img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+
+.session7 .container .worker-info .info {
+	font-size: 20px;
+}
+
+.session8 .container-self {
+	width: 300px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.session8 > * {
+	padding-top: 30px;
+}
+
+.session8 .email-input input {
+	font-size: 16px;
+	width: 300px;
+	padding: 15px;
+	background-color: gainsboro;
+}
+
+.session8 .email-input button {
+	font-size: 16px;
+	padding: 15px;
+	cursor: pointer;
+	color: white;
+	background-color: blue;
+}
+
+.session8 .email-input button:hover {
+	background-color: red;
+}
+
+.session8 .p1 {
+	font-size: 10px;
+	color: gray;
+}
+
+.session8 .p2 {
+	font-size: 25px;
+	font-weight: bolder;
+}
+
+footer {
+	margin: 50px 0;
+	padding: 50px 0;
+	color: white;
+	background-color: black;
+}
+
+footer > div > div p:first-child {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+footer > div > div p:first-child ~ * {
+	color: gray;
+}
+
+footer .container > * > * {
+	margin-bottom: 25px;
+}
+
+footer .container .brand-session {
+	width: 16%;
+}
+
+footer .container .brand-session .brand-name {
+	font-size: 25px;
+}
+
+footer .container .brand-session .icons a {
+	margin-right: 10px;
+}
+
+footer .container .brand-session .icons a i {
+	font-size: 20px;
+	position: relative;
+	color: #277ef0;
+}
+
+footer .container .brand-session .icons a i:hover::after {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background: rgba(0, 0, 0, .4);
+}
+
+footer .container .useful-links {
+	width: 16%;
+}
+
+footer .container .useful-links ul li {
+	margin-top: 15px;
+}
+
+footer .container .useful-links ul li a {
+	color: grey;
+}
+
+footer .container .useful-links ul li a:hover {
+	color: red;
+}
+
+footer .container .subscribe-session {
+	width: 32%;
+}
+
+footer .container .subscribe-session input {
+	width: 250px;
+	padding: 15px;
+}
+
+footer .container .subscribe-session a {
+	display: block;
+	padding: 15px 30px;
+	color: white;
+	background-color: blue;
+}
+
+footer .container .subscribe-session a:hover {
+	background-color: red;
+}
+

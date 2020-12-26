@@ -1,0 +1,53 @@
+$col: 12; //số lượng column của 1 row
+$gutter: 50px;
+@import "media";
+//bỏ biến i trong #{} để nó chuyển biến đó thành string
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -$gutter / 2; //padding ko thể âm, chỉ đc margin âm, ngta quy ước thế
+
+    @include xs {
+        @for $i from 1 through $col {
+            .col-xs-#{$i} {
+                width: (100% / $col) * $i;
+                //box-sizing: border-box; //box-sizing ko có ích gì, vì cái này width theo %, nên div tự căn chỉnh cho tổng width của nó đúng số %
+                //margin-right: 10px; //box-sizing ko ảnh hưởng tới margin, chỉ có border với padding
+                padding: $gutter/2;
+                //border: 2px solid magenta;
+            }
+        }
+    }
+    @include sm {
+        @for $i from 1 through $col {
+            .col-sm-#{$i} {
+                width: (100% / $col) * $i;
+                padding: $gutter/2;
+            }
+        }
+    }
+    @include md {
+        @for $i from 1 through $col {
+            .col-md-#{$i} {
+                width: (100% / $col) * $i;
+                padding: $gutter/2;
+            }
+        }
+    }
+    @include lg {
+        @for $i from 1 through $col {
+            .col-lg-#{$i} {
+                width: (100% / $col) * $i;
+                padding: $gutter/2;
+            }
+        }
+    }
+    @include xl {
+        @for $i from 1 through $col {
+            .col-xl-#{$i} {
+                width: (100% / $col) * $i;
+                padding: $gutter/2;
+            }
+        }
+    }
+}

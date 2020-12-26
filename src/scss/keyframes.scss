@@ -1,0 +1,127 @@
+@import "flex";
+
+.square {
+    width: 300px;
+    height: 300px;
+    background: #333;
+
+    animation-name: changeBg;
+    animation-duration: 2s;
+    animation-fill-mode: backwards; //initial-from-end : dừng lại tại trạng thái end //bachward dừng trạng thái initial
+    //animation-iteration-count: infinite; //số lần thực hiện animation
+    animation-iteration-count: 3; //2 lần
+    //animation-delay: 1s;
+    animation-direction: alternate; //initial->form->end->end->from->from->...
+}
+
+//định nghĩa 1 animation có tên là changeBg
+
+@keyframes changeBg {
+    from {
+        background: red;
+        transform: translateX(0px);
+    }
+    to {
+        background: rgb(7, 255, 7);
+        transform: translateY(50px);
+    }
+}
+
+.loading {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    span {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #333;
+        animation: loading 1s forwards alternate infinite ease;
+        //animation-timing-function: linear;
+        //linear: chuyển động đều
+        //ease-in: (chậm) lúc ban đầu -
+        //ease-out: ra thì chậm
+        //ease: chậm ở giữa
+        //ease-in-out: chậm đầu cuối
+
+        // &:nth-child(2){
+        //     animation-delay: 0.5s;
+        // }
+        // &:nth-child(3){
+        //     animation-delay: 1s;
+        // }
+        //1 to 5 : 1 -> 4 ; 1 through 5: 1 -> 5
+        @for $var from 1 through 8 {
+            &:nth-child(#{$var}) {
+                animation-delay: $var * 1s;
+            }
+        }
+    }
+    // span:first-child{
+    //     +span{
+    //         animation-delay: 0.5s;
+    //         +span{
+    //             animation-delay: 1s;
+    //         }
+    //     }
+    // }
+}
+
+@keyframes loading {
+    0% {
+        transform: translateY(0px);
+        opacity: 0.2;
+    }
+    100% {
+        transform: translateY(-100px);
+        opacity: 0.5;
+    }
+}
+
+.part3 {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .so39 {
+        background-color: rgb(7, 255, 7);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        span{
+            font-size: 50px;
+            //z-index: 1;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top:50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: gray;
+            z-index: -9991;
+            margin-top: -50px;
+            margin-left: -50px;
+            animation: load39 1s  backwards infinite;
+        }
+    }
+}
+
+@keyframes load39 {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}

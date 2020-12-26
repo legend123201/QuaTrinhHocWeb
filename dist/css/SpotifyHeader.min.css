@@ -1,0 +1,1 @@
+.container{width:1100px;margin:0 auto}header{padding:20px 0;background-color:#000}header .container{display:flex;color:#fff;justify-content:space-between;align-items:center}header nav ul{display:flex}header nav ul li{font-size:20px;margin-left:20px}.logo{display:flex;height:200px;background:gray;align-items:center;justify-content:center}

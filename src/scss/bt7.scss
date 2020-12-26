@@ -1,0 +1,738 @@
+@import "flex";
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    > * {
+        //background: white;
+    }
+    // > img {
+    //     width: 100vw;
+    //     height: 100vh;
+    //     position: fixed;
+    //     z-index: -999;
+    // }
+}
+
+.dropdown {
+    display: none;
+}
+
+header {
+    color: white;
+}
+
+.start-page {
+    background: url(https://demo.w3layouts.com/demosWTR/Freedom/01-11-2019/hr-crew-freedom-web-demo_Free/1988896932/web/assets/images/banner.jpg)
+        no-repeat top center/cover;
+    height: 800px;
+    z-index: 1;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: rgba(black, 0.6);
+    }
+}
+
+.start-page {
+    position: relative;
+
+    header {
+        border-bottom: 1px solid rgba(white, 0.3);
+        .container {
+            h1 {
+            }
+            nav {
+                > ul {
+                    > li {
+                        margin-left: 25px;
+                        position: relative;
+                        padding: 30px 0;
+                        > a {
+                            color: rgba(white, 0.8);
+                            font-size: 18px;
+                            &:hover {
+                                color: white;
+                            }
+                            i {
+                                font-size: 12px;
+                                margin-left: 3px;
+                            }
+                        }
+                        // .triangle{
+                        //     width: 50px;
+                        //     height: 50px;
+                        //     position: absolute;
+                        //     top: 63px;
+                        //     background-color: white;
+                        //     display: none;
+                        //     transform: rotate(45deg);
+                        //     //overflow: hidden; position ko có overflow đc, nó cứ đè lên nhau
+                        //     //z-index: -1; //ko cần z index thì nó cũng tự nằm phía sau cái dropdown, ko hiểu vì sao, có thể đổi màu background để kiểm chứng
+                        // }
+                        .dropdown {
+                            background-color: white;
+                            position: absolute;
+                            top: 68px;
+                            padding: 15px;
+                            border-radius: 5px;
+                            ul {
+                                li {
+                                    a {
+                                        color: black;
+                                        font-size: 18px;
+                                        transition: all 0.25s;
+                                        display: inline-block; //muốn dùng transform thì tag đó hải là block hoạc inline-block
+                                        &:hover {
+                                            transform: translateX(5px);
+                                            color: red;
+                                        }
+                                    }
+                                    margin: 15px;
+                                }
+                            }
+                            &:after {
+                                content: "";
+                                top: 0;
+                                width: 30px;
+                                height: 30px;
+                                background: white;
+                                position: absolute;
+                                left: 50%;
+                                transform: rotate(45deg) translateX(-50%);
+                            }
+                        }
+                        &.Pages {
+                            .dropdown {
+                                width: 520px;
+                                transform: translateX(-45%);
+                            }
+                        }
+                        &.Blog {
+                            .dropdown {
+                                width: 200px;
+                                transform: translateX(-38%);
+                            }
+                        }
+                        &.Accounts {
+                            .dropdown {
+                                width: 220px;
+                                transform: translateX(-38%);
+                            }
+                        }
+                        &:hover {
+                            .dropdown {
+                                display: flex;
+                            }
+                            .triangle {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content-links {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        .container-self {
+            width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2,
+            h3 {
+                color: white;
+            }
+            p {
+                color: gainsboro;
+            }
+            h2 {
+                font-size: 50px;
+                font-weight: 100;
+                + p {
+                    font-size: 20px;
+                    margin-bottom: 40px;
+                    margin-top: 20px;
+                }
+            }
+            .most-searches {
+                h3 {
+                    font-size: 25px;
+                    font-weight: lighter;
+                }
+                ul {
+                    li {
+                        a {
+                            color: white;
+                            text-decoration: underline;
+                            font-style: italic;
+                            &:hover {
+                                color: red;
+                            }
+                        }
+                        margin: 20px;
+                    }
+                }
+            }
+            form {
+                input {
+                    padding: 15px;
+                    width: 200px;
+                    border-right: 1px solid black;
+                    border-radius: 5px 0 0 5px;
+                }
+                button {
+                    background-color: rgb(245, 76, 76);
+                    padding: 15px 40px;
+                    color: white;
+                    border-radius: 0 5px 5px 0;
+                    &:hover {
+                        background-color: red;
+                    }
+                }
+                select {
+                    padding: 10px;
+                    color: gray;
+                    &:nth-child(2) {
+                        border-right: 1px solid black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.session1 {
+    margin: 50px 0;
+    .container {
+        .title {
+            text-align: center;
+            h1 {
+                position: relative;
+                display: inline-block;
+                //width: fit-content; ?????
+                //background-color: royalblue;
+                font-size: 30px;
+                &:after {
+                    content: "";
+                    width: 60%;
+                    height: 4px;
+                    background: red;
+                    position: absolute;
+                    bottom: -7px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        .Categories {
+            .items {
+                margin: 30px 0;
+                .item {
+                    border: 1px solid white;
+                    padding: 20px 50px 20px 20px;
+                    background-color: rgba(gray, 0.1);
+                    position: relative;
+                    overflow: hidden;
+                    &:hover {
+                        background-color: white;
+                        border: 1px solid gainsboro;
+                        i {
+                            color: gainsboro;
+                        }
+                    }
+                    h3 {
+                        font-size: 20px;
+                    }
+                    p {
+                        margin-top: 5px;
+                    }
+                    i {
+                        position: absolute;
+                        right: -6px;
+                        bottom: -2px;
+                        color: white;
+                        font-size: 50px;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.session2 {
+    height: 300px;
+    background: url(https://demo.w3layouts.com/demosWTR/Freedom/01-11-2019/hr-crew-freedom-web-demo_Free/1988896932/web/assets/images/banner1.jpg) no-repeat top center/cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    color: white;
+    .container {
+        h2 {
+            font-weight: 100;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 35px;
+        }
+        .buttons {
+            a {
+                color: white;
+                padding: 15px 30px;
+                border-radius: 5px;
+                margin-right: 20px;
+            }
+            .apply {
+                background-color: rgb(245, 76, 76);
+                transition: all 0.4s;
+                &:hover {
+                    background-color: red;
+                }
+            }
+            .search {
+                border: 1px solid white;
+                transition: all 0.4s;
+                &:hover {
+                    background-color: rgba(white, 0.3);
+                    border: 1px solid rgba(white, 0.5);
+                }
+            }
+        }
+    }
+}
+
+.session3 {
+    padding: 50px 0;
+    height: 1000px;
+    background-color: rgba(black, 0.1);
+    .feature-jobs {
+        .container {
+            .title {
+                text-align: center;
+                font-size: 25px;
+                * {
+                    position: relative;
+                    display: inline-block;
+                    &:after {
+                        content: "";
+                        width: 80%;
+                        height: 2px;
+                        background: red;
+                        position: absolute;
+                        bottom: -4px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+            .actions {
+                .jobs {
+                    position: relative;
+                    margin-top: 50px;
+                    .items {
+                        position: absolute;
+                        opacity: 0;
+                        transition: all 0.3s;
+                        width: 100%;
+                        .item {
+                            background-color: white;
+                            width: 100%;
+                            box-shadow: 0px 0px 3px -1px #333;
+                            border-left: 3px solid red;
+                            border-radius: 3px;
+                            padding: 50px;
+                            margin: 40px 0;
+                            position: relative;
+                            overflow: hidden;
+                            transition: all 0.4s;
+                            &:hover {
+                                transform: translateY(-10px);
+                            }
+                            &:hover {
+                                &:after {
+                                    transform: rotate(45deg) translateY(80%);
+                                }
+                                &:before {
+                                    transform: rotate(45deg) translateY(-80%);
+                                }
+                            }
+                            &:after {
+                                transition: all 0.5s;
+                                content: "";
+                                width: 100px;
+                                height: 100px;
+                                background: red;
+                                left: 0;
+                                bottom: 0;
+                                transform: rotate(45deg) translateY(130%);
+                                position: absolute;
+                            }
+                            &:before {
+                                transition: all 0.5s;
+                                content: "";
+                                width: 100px;
+                                height: 100px;
+                                background: red;
+                                right: 0;
+                                top: 0;
+                                transform: rotate(45deg) translateY(-130%);
+                                position: absolute;
+                            }
+                            .job-name-group {
+                                .image {
+                                    width: 50px;
+                                    height: 50px;
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+                                .content {
+                                    margin-left: 20px;
+                                    h3 {
+                                        font-size: 20px;
+                                        font-weight: 700; //????????????????????????????????
+                                        margin-bottom: 10px;
+                                    }
+                                    .description {
+                                        * {
+                                            color: gray;
+                                            i {
+                                                margin-right: 10px;
+                                            }
+                                            margin-right: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                            .info {
+                                p:first-child {
+                                    margin-bottom: 10px;
+                                }
+                                p {
+                                    b {
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                            a {
+                                padding: 15px 30px;
+                                color: red;
+                                border: 1px solid red;
+                                border-radius: 5px;
+                                transition: all 0.5s;
+                                &:hover {
+                                    border: 1px solid black;
+                                    background-color: black;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                    input {
+                        display: none;
+                    }
+                    .recent-job {
+                    }
+                    .update-job {
+                    }
+                    label {
+                        position: absolute;
+                        top: -40px;
+                        padding: 15px 30px;
+                        border: 1px solid gray;
+                        background-color: white;
+                        left: 50%;
+                        margin: 10px 0;
+                        &.recent {
+                            transform: translateX(-110%);
+                        }
+                        &.update {
+                            transform: translateX(6%);
+                        }
+                    }
+                    input:checked {
+                        ~ .items {
+                            opacity: 1;
+                            z-index: 999; //nếu ko có cái này thì cái updated-job ở trên hoài cái recent-job, recent-job ko thể hover đc luôn
+                        }
+                        ~ label {
+                            background: #333;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.session4 {
+    margin: 50px;
+    .container {
+        .content {
+            width: 50%;
+            margin-right: 50px;
+            h3 {
+                font-weight: 100;
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+            p {
+                color: gray;
+                margin-bottom: 20px;
+            }
+            a {
+                display: inline-block;
+                color: white;
+                padding: 15px 30px;
+                border-radius: 5px;
+                background-color: rgb(245, 76, 76);
+                transition: all 0.4s;
+                &:hover {
+                    background-color: red;
+                }
+            }
+        }
+        .image {
+            width: 50%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.session5 {
+    background-color: gainsboro;
+    margin: 50px 0;
+    padding: 50px 0;
+    .container {
+        .title {
+            text-align: center;
+            // display: flex; //cách 2
+            // justify-content: center;
+            margin-bottom: 20px;
+            * {
+                position: relative;
+                display: inline-block;
+                //width: fit-content; //cách 2
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 60%;
+                    height: 3px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: red;
+                }
+            }
+        }
+        .content {
+            .item {
+                width: 32%;
+                background-color: white;
+                border-radius: 5px 5px 0 0;
+                transition: all 0.5s;
+                .image-item {
+                    img {
+                        width: 100%;
+                        border-radius: 5px 5px 0 0;
+                    }
+                }
+                .content-item {
+                    padding: 25px;
+                    .date,
+                    .content {
+                        color: gray;
+                    }
+                    .date,
+                    .title-item {
+                        margin-bottom: 15px;
+                    }
+                    .title-item {
+                        font-size: 18px;
+                    }
+                }
+                &:hover {
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+}
+
+.session6 {
+    margin: 50px 0;
+    .container {
+        .content {
+            width: 50%;
+            margin-right: 50px;
+            .start {
+                font-size: 12px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            h2 {
+                font-weight: 100;
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+            .paragrap {
+                margin-bottom: 40px;
+            }
+            .getlink {
+                p {
+                }
+                .form {
+                    .input-group {
+                        input {
+                            width: 220px;
+                            border: 1px solid gray;
+                            border-right: none;
+                            border-radius: 4px 0 0 4px;
+                            padding: 15px;
+                            &:focus {
+                                border: 1px solid black;
+                                border-right: none;
+                            }
+                        }
+                        a {
+                            padding: 15px 30px;
+                            border: 1px solid rgb(245, 76, 76);
+                            border-right: none;
+                            color: white;
+
+                            border-radius: 0 4px 4px 0;
+                            background-color: rgb(245, 76, 76);
+
+                            &:hover {
+                                background-color: red;
+                            }
+                        }
+                    }
+                    .icons {
+                        .icon {
+                            a {
+                                width: 35px;
+                                height: 35px;
+                                margin: 10px;
+                                border-radius: 50%;
+                                background-color: black;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                i {
+                                    color: white;
+                                }
+                                &:hover {
+                                    i {
+                                        color: red;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .image {
+            width: 50%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 40px 0;
+    h3 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    p,
+    a {
+        color: gray;
+    }
+    .container {
+        .get-in-touch {
+            width: 25%;
+            p {
+                margin-bottom: 20px;
+            }
+            .input-group {
+                border-radius: 5px;
+                input {
+                    padding: 15px;
+                    background-color: gainsboro;
+                    border-radius: 5px 0 0 5px;
+                }
+                a {
+                    border-radius: 0 5px 5px 0;
+                    padding: 15px 25px;
+                    background-color: rgb(245, 76, 76);
+                    i {
+                        color: white;
+                    }
+                    &:hover {
+                        background-color: red;
+                    }
+                }
+            }
+        }
+        .links {
+            ul {
+                li {
+                    margin-bottom: 15px;
+                    transition: all 0.5s;
+                    &:hover {
+                        color: white;
+                        transform: translateX(5px);
+                        a {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        .Mobile-app {
+            > div {
+                border: 1px solid gray;
+                padding: 5px;
+                margin-top: 10px;
+                transition: all 0.5s;
+                cursor: pointer;
+                i {
+                    font-size: 30px;
+                    margin-right: 15px;
+                }
+                .content {
+                    span {
+                        font-size: 10px;
+                    }
+                    p {
+                        color: white;
+                        font-size: 18px;
+                    }
+                }
+                &:hover {
+                    border: 1px solid black;
+                }
+            }
+        }
+    }
+}
