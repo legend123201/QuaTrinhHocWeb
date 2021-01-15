@@ -41,7 +41,7 @@ header {
 .start-page {
 	z-index: 1;
 	height: 800px;
-	background: url(https://demo.w3layouts.com/demosWTR/Freedom/01-11-2019/hr-crew-freedom-web-demo_Free/1988896932/web/assets/images/banner.jpg) no-repeat top center/cover;
+	background: url(../img/bannerBT7.jpg) no-repeat top center/cover;
 }
 
 .start-page::after {

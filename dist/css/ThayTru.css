@@ -1,0 +1,327 @@
+.flex {
+	display: flex;
+}
+
+.j-between {
+	justify-content: space-between;
+}
+
+.j-around {
+	justify-content: space-around;
+}
+
+.j-center {
+	justify-content: center;
+}
+
+.a-center {
+	align-items: center;
+}
+
+.a-start {
+	align-items: flex-start;
+}
+
+.a-end {
+	align-items: flex-end;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown {
+	display: none;
+}
+
+header {
+	color: white;
+}
+
+.start-page {
+	z-index: 1;
+	height: 600px;
+	background: url(../img/bannerBT7.jpg) no-repeat top center/cover;
+}
+
+.start-page::after {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background-color: rgba(0, 0, 0, .6);
+}
+
+.start-page {
+	position: relative;
+}
+
+.start-page header {
+	border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.start-page header .container nav > ul > li {
+	position: relative;
+	margin-left: 25px;
+	padding: 30px 0;
+}
+
+.start-page header .container nav > ul > li > a {
+	font-size: 18px;
+	color: white;
+}
+
+.start-page header .container nav > ul > li > a i {
+	font-size: 12px;
+	margin-left: 3px;
+}
+
+.start-page header .container nav > ul > li:hover > a {
+	color: orange;
+}
+
+.start-page header .container nav > ul > li .dropdown {
+	position: absolute;
+	z-index: 2;
+	top: 68px;
+	padding: 15px;
+	border-radius: 5px;
+	background-color: white;
+}
+
+.start-page header .container nav > ul > li .dropdown ul li {
+	margin: 15px;
+}
+
+.start-page header .container nav > ul > li .dropdown ul li a {
+	font-size: 18px;
+	display: inline-block;
+	transition: all .25s;
+	color: black;
+}
+
+.start-page header .container nav > ul > li .dropdown ul li a:hover {
+	transform: translateX(5px);
+	color: red;
+}
+
+.start-page header .container nav > ul > li .dropdown:after {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 50%;
+	width: 30px;
+	height: 30px;
+	content: '';
+	transform: rotate(45deg) translateX(-50%);
+	background: white;
+}
+
+.start-page header .container nav > ul > li.Manage .dropdown {
+	width: 250px;
+	transform: translateX(-38%);
+	justify-content: center;
+}
+
+.start-page header .container nav > ul > li.contact .dropdown {
+	width: 300px;
+	transform: translateX(-40%);
+	color: black;
+}
+
+.start-page header .container nav > ul > li.contact .dropdown .content {
+	width: 100%;
+	text-align: center;
+}
+
+.start-page header .container nav > ul > li.Account .dropdown {
+	width: 200px;
+	transform: translateX(-35%);
+	color: black;
+}
+
+.start-page header .container nav > ul > li.Account .dropdown .content {
+	width: 100%;
+	text-align: center;
+}
+
+.start-page header .container nav > ul > li:hover .dropdown {
+	display: flex;
+}
+
+.start-page .content-links {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.start-page .content-links .container-self {
+	display: flex;
+	flex-direction: column;
+	width: 800px;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.start-page .content-links .container-self h2 {
+	color: white;
+}
+
+.start-page .content-links .container-self p {
+	color: gainsboro;
+}
+
+.start-page .content-links .container-self h2 {
+	font-size: 50px;
+	font-weight: 100;
+}
+
+.start-page .content-links .container-self h2 + p {
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.session2 {
+	padding: 80px 0;
+	border-bottom: 1px solid #cecaca;
+}
+
+.session2 ul li a img {
+	width: 150px;
+	height: 70px;
+}
+
+footer {
+	margin: 50px 0;
+	padding: 50px 0;
+	color: white;
+	background-color: black;
+}
+
+footer > div {
+	padding: 0;
+}
+
+footer > div > div p:first-child {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+footer > div > div p:first-child ~ * {
+	color: gray;
+}
+
+footer .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+footer .container .brand-session {
+	width: 16%;
+}
+
+footer .container .brand-session .brand-name {
+	font-size: 25px;
+	margin-top: 30px;
+}
+
+footer .container .brand-session .icons a {
+	margin-right: 10px;
+}
+
+footer .container .brand-session .icons a i {
+	font-size: 20px;
+	position: relative;
+	color: #277ef0;
+}
+
+footer .container .brand-session .icons a i:hover::after {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background: rgba(0, 0, 0, .4);
+}
+
+footer .container .address-part {
+	display: flex;
+	width: 450px;
+	align-items: center;
+}
+
+footer .container .address-part .image {
+	display: flex;
+	overflow: hidden;
+	width: 40%;
+	height: 170px;
+	margin-right: 20px;
+	border-radius: 50%;
+	background-color: white;
+	justify-content: center;
+	align-items: center;
+}
+
+footer .container .address-part .image img {
+	width: 100%;
+}
+
+footer .container .address-part .content {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	justify-content: space-around;
+}
+
+footer .container .address-part .content h4 {
+	font-size: 20px;
+}
+
+footer .container .address-part .content p {
+	color: gray;
+}
+
+footer .container .address-part .content p,
+footer .container .address-part .content span {
+	font-size: 17px;
+}
+
+footer .container .address-part .content span a {
+	color: aqua;
+}
+
+footer .container .address-part .content span a:hover {
+	color: blue;
+}
+
+footer .container .subscribe-session {
+	width: 32%;
+}
+
+footer .container .subscribe-session input {
+	width: 250px;
+	padding: 15px;
+}
+
+footer .container .subscribe-session a {
+	display: block;
+	padding: 15px 30px;
+	color: white;
+	background-color: blue;
+}
+
+footer .container .subscribe-session a:hover {
+	background-color: red;
+}
+
+footer .container .subscribe-session p {
+	margin-top: 20px;
+}
+
