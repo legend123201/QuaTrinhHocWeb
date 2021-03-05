@@ -42,3 +42,8 @@ const newUsers = users.filter((val, index) => {
     return val.age >= 20 && val.gender === "female";
 });
 console.log(newUsers);
+
+let userSpecified = users.find(i => i.name == "User2");
+console.log(userSpecified.age);
+let indexUserSpecified = users.findIndex(i => i.name == "User2");
+console.log(indexUserSpecified);
