@@ -16,10 +16,15 @@ numbers.sort((a, b) => {return a-b});
 console.log(numbers);
 
 //ko thể sắp xếp giảm dần bằng cách ngắn gọn
-//phải làm so sánh >, <, =
 let strings = ["a","bc", "aac", "cba", "cc", "abc",""];
-console.log(strings.sort()); //tăng dần
-console.log(strings.sort((a,b)=>{return b - a;})); //vẫn tăng dần
+console.log(strings.sort()); //tăng dần -> ['', a', 'aac', 'abc', 'bc', 'cba', 'cc']
+console.log(strings.sort((a,b)=>{return b - a;})); //vẫn tăng dần -> -> ['', a', 'aac', 'abc', 'bc', 'cba', 'cc']
+
+//cách 1
+console.log(strings.sort().reverse());
+
+//cách 2
+//phải làm so sánh >, <, = như bên c++
 //giảm dần thành công
 console.log(strings.sort((a,b)=>{
     if(a > b){
@@ -30,5 +35,3 @@ console.log(strings.sort((a,b)=>{
         return 0;
     }
 }));
-//cách 2
-console.log(strings.sort().reverse());

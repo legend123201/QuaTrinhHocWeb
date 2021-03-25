@@ -6,6 +6,7 @@
 //slice()
 //splice()
 //array.reduce()
+//find(), findIndex() ở bên file Object.js phần Bài tập
 
 //---------------------------------------1 số thứ về empty array
 /*
