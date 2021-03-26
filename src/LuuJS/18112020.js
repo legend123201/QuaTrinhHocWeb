@@ -238,8 +238,9 @@ $(document).ready(function () {
       function MatchStr(match) {
         return `<span style="color: red;">${match}</span>`;
       }
-      return { ...val, name: newName };
+      return { ...val, name: newName }; //phải để name: newName ở cuối để nó đè lên cái name cũ (của ...val) đằng trc (chưa hiểu thì qua file objects xem lý thuyết)
     })
+
     renderProducts(matchArr);
   });
 });

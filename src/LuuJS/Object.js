@@ -85,6 +85,12 @@ console.log(myArray); //-> [ 'John', 30, 'New York' ]
 var myString = JSON.stringify(person2);
 console.log(myString);//-> {"name":"John","age":30,"city":"New York"}
 
+var testObj = {a: 1, a: 2, b: 3, c: 4, b: 5};
+console.log(testObj); //-> { a: 2, b: 5, c: 4 } (bị trùng thì nó lấy cái cuối xuất hiện, giống y chang trường hợp 1 và "1" đầu tiên)
+
+//NGOÀI RA: còn có constructor, getter, setter, prototype để thêm properties cho constructor, và nhiều hàm có sẵn như isFrozen(),...
+//đụng tới thì tìm hiểu thêm 
+
 /*
 //BÀI TẬP về objects
 users = [
