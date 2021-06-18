@@ -1,4 +1,4 @@
-
+//nên dùng hàm .every() để cải tiến
 function solution(input) {
     /*
     Xác định input có phải là 1 "special array" hay không

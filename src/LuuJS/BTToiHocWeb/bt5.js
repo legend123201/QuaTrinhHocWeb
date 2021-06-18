@@ -4,15 +4,12 @@ function solution(input) {
     Xuất dữ liệu thành 1 object
     Ví dụ: input = [2,4,6,4,4] -> output = {"2": 1, "4": 3, "6":1}
     */
-    let output = input.reduce((acc, val, index, { }) => {
-        // if(val in acc){
-        //     acc[val] += 1;
-        // }
-        // else{
-        //     acc[val] = 1;
-        // }
-        val in acc ? acc[val] += 1 : acc[val] = 1;
-        return acc;
+    let output = input.reduce((total, val, index, { }) => {
+        val in total ? total[val] += 1 : total[val] = 1;
+        return total;
     }, {});
     return output;
 }
+
+
+console.log(solution([2,4,6,4,4]));

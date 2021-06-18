@@ -1,3 +1,4 @@
+//còn rất nhiều hàm khác nữa, lên mạng bấm array method js là có ngay, ví dụ hàm .every() và .some()
 //1 số thứ về empty array và array (log(arr), typeof(arr), arr.length, arr[outOfIndex])
 //1 số thứ về array ko rỗng (log(arr), arr.length, arr[outOfIndex])
 //prototype
@@ -5,8 +6,9 @@
 //push(),pop(),shift(),unshift()
 //slice()
 //splice()
-//array.reduce()
+//array.reduce() //có file riêng của nó
 //find(), findIndex() ở bên file Object.js phần Bài tập
+
 
 //---------------------------------------1 số thứ về empty array
 /*

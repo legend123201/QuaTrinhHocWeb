@@ -1,3 +1,5 @@
+let a = ["happy birthday","hawwy birthday"];
+
 function solution(input) {
     /*
     Viết chương trình kiểm tra bàn phím có hư hay không
@@ -6,11 +8,16 @@ function solution(input) {
     💋 + Phần tử sau là string sai
     In ra phím bị hư
     */
-    let arr = input[0].filter((val, index) => {
-        return val !== input[1][index];
+    let arr1 = input[0].split("");
+    let arr2 = input[1].split("");
+    let output = "";
+    
+    arr1.forEach((val, index) => {
+        if(val != arr2[index])
+            if (!output.includes(val))
+                output += val;
     });
-    let output = arr.filter((val, index) => {
-        return index === arr.indexOf(val); 
-    });
-    return output;
+    return output.split("");
 }
+
+console.log(solution(a));

@@ -8,16 +8,13 @@ function solution(input) {
     Input: "hello worlD"
     output: "Hello World"
     */
-    if (input.length === 0) {
+    if (input == "") {
         return "";
+    } else {
+        let x = input.toLowerCase().split(' ');
+        let a = x.map((value) => {
+            return value[0].toUpperCase() + value.slice(1);
+        })
+        return a.join(' ');
     }
-    input = input.toLowerCase();
-    input = input.split("");
-    input[0] = input[0].toUpperCase();
-    for(let i = 1; i < input.length; i++){
-        if(input[i - 1] === " "){
-            input[i] = input[i].toUpperCase();
-        }
-    }
-    return input.join("");
 }
