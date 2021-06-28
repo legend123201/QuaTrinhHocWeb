@@ -1,6 +1,7 @@
 // tất cả các string methods đều ko sửa string đc gọi, mà nó trả về 1 string mới
 //match(), matchAll(), replace(), replaceAll(), search(), and split() có thể dùng RegExp
 //chỉ có replace(), replaceAll() là có tham số thứ 2 có thể được chứa hàm, và hàm có công dụng rất quan trọng
+
 //string.length, string.repeat(int)
 //s[index], string.charAt(int), string.charCodeAt(int)
 //string.toUpperCase(), string.toLowerCase()

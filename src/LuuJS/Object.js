@@ -36,7 +36,7 @@ console.log(user[2]); //-> undefined
 //trường hợp key là string có thể biến thành số thì dùng key chuỗi hay key số đều là 1, ở trên có 2 cái key đều có thể mang ý nghĩa là 1, thì giá trị nó lấy cái cuối cùng xuất hiện
 //thầy Nhất said: key là số thì tự động biến thành chuỗi 
 
-//object có thể duyệt qua các key của nó bằng for...in loop
+//object có thể duyệt qua các key hoặc value của nó bằng for...in loop
 var person = {
     fname: "John",
     lname: "Doe",

@@ -22,5 +22,5 @@ console.log(number + "");
 console.log(number.toString());
 
 //parseInt(number) -> biến thành số nguyên (ko đc là số thực)
-console.log(Number("126.5"));
-console.log(parseInt("126.8"));
+console.log(Number("126.5")); //-> 126.5
+console.log(parseInt("126.8")); //126
