@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="dist\css\all.min.css">
+  <title>Bootstrap 4</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <p>Use <code>code</code> element to presentation for code.</p>
+  <p>Use the <code>mark</code> element to <mark>highlight</mark> text.</p>
+  <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948. (use <code>abbr</code> element)</p>
+  <div class="container border">
+    <h1>Blockquotes</h1>
+    <p>The blockquote element is used to present content from another source:</p>
+    <blockquote class="blockquote">
+      <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF
+        works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million
+        globally.</p>
+      <footer class="blockquote-footer">From WWF's website (class <code>.blockquote-footer</code>)</footer>
+    </blockquote>
+  </div>
+  <p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+  <pre>
+      Text in a <code class="bg-red">pre</code> element
+      is displayed in a fixed-width
+      font, and it preserves
+      both      spaces and
+      line breaks. (I can not change the color of this text???)
+    </pre>
+
+
+  <p class="text-muted"><code>.text-muted</code> This text is muted.</p>
+  <p class="text-primary"><code>.text-primary</code> This text is important.</p>
+  <p class="text-success"><code>.text-success</code> This text indicates success.</p>
+  <p class="text-info"><code>.text-info</code> This text represents some information.</p>
+  <p class="text-warning"><code>.text-warning</code> This text represents a warning.</p>
+  <p class="text-danger"><code>.text-danger</code> This text represents danger.</p>
+  <p class="text-secondary"><code>.text-secondary</code> Secondary text.</p>
+  <p class="text-dark"><code>.text-dark</code> This text is dark grey.</p>
+  <p class="text-body"><code>.text-body</code> Default body color (often black).</p>
+  <p class="text-light"><code>.text-light</code> This text is light grey (on white background).</p>
+  <p class="text-white"><code>.text-white</code> This text is white (on white background).</p>
+  <p>Tất cả class trên mà bỏ vào thẻ <code>a</code> thì nó sẽ tự add hiệu ứng đậm hơn khi hover vào link <a href="#"
+      class="text-danger">Đây là ví dụ</a></p>
+
+  <p class="text-black-50">Black text with 50% opacity on white background <code>.text-black-50</code></p>
+  <p class="text-white-50 bg-dark">White text with 50% opacity on black background<code>.text-white-50</code></p>
+
+  <p>Note that you can also add a .text-* class if you want a different text color:</p>
+  <p class="bg-primary text-white"><code>.bg-primary </code>This text is important.</p>
+  <p class="bg-success text-white"><code>.bg-success </code>This text indicates success.</p>
+  <p class="bg-info text-white"><code>.bg-info </code>This text represents some information.</p>
+  <p class="bg-warning text-white"><code>.bg-warning </code>This text represents a warning.</p>
+  <p class="bg-danger text-white"><code>.bg-danger </code>This text represents danger.</p>
+  <p class="bg-secondary text-white"><code>.bg-secondary </code>Secondary background color.</p>
+  <p class="bg-dark text-white"><code>.bg-dark </code>Dark grey background color.</p>
+  <p class="bg-light text-dark"><code>.bg-light </code>Light grey background color.</p>
+
+  <div class="container">
+    <h2>Rounded Corners</h2>
+    <p>The <code>.rounded class </code>adds rounded corners to an image:</p>
+    <img src="https://picsum.photos/100/150" class="rounded" alt="Cinque Terre" width="304" height="236">
+  </div>
+
+  <div class="container">
+    <h2>Circle</h2>
+    <p>The <code>.rounded-circle</code> class shapes the image to a circle:</p>
+    <img src="https://picsum.photos/100/150" class="rounded-circle" alt="Cinque Terre" width="304" height="236">
+  </div>
+
+  <div class="container">
+    <h2>Thumbnail</h2>
+    <p>The <code>.img-thumbnail</code> class creates a thumbnail of the image (bordered):</p>
+    <img src="https://picsum.photos/100/150" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+  </div>
+
+  <div class="container" style="padding-bottom: 400px;">
+    <h2>Aligning images</h2>
+    <p>Use the float classes to float the image to the left or to the right: (class <code>.float-left</code>
+      <code>.float-right</code>)
+    </p>
+    <p>Ko nên xài cái này, dùng float là nó thành position absolute, nội dung đè lên nhau tùm lum.</p>
+    <img src="https://picsum.photos/100/150" class="float-left" alt="Paris" width="304" height="236">
+    <img src="https://picsum.photos/100/150" class="float-right" alt="Paris" width="304" height="236">
+  </div>
+
+  <div class="container">
+    <h2>Centered Image</h2>
+    <p>Center an image by adding the utility classes <code>.mx-auto</code> (margin:auto) and <code>.d-block</code>
+      (display:block) to the image:</p>
+    <img src="https://picsum.photos/100/150" class="mx-auto d-block" style="width:10%">
+  </div>
+
+  <div class="container" style="width: 50%;">
+    <h2>Image responsive</h2>
+    <p>The <code>.img-fluid</code> class makes the image scale nicely to the parent element (responsive image) (resize
+      the browser window to see the effect):</p>
+    <img class="img-fluid" src="https://picsum.photos/100/150" alt="Chania" style="width: 200px;">
+  </div>
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1><code>.jumbotron</code> indicates a big grey box for calling extra attention to some special content or
+        information.</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Alerts</h2>
+    <p>Alerts are created with the .alert class, followed by a contextual color classes:</p>
+    <div class="alert alert-success">
+      <strong>Success!</strong> This alert box could indicate a successful or positive action. (includes class
+      <code>.alert</code> and <code>.alert-success</code>)
+    </div>
+    <div class="alert alert-info">
+      <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+    </div>
+    <div class="alert alert-warning">
+      <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+    </div>
+    <div class="alert alert-danger">
+      <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+    </div>
+    <div class="alert alert-primary">
+      <strong>Primary!</strong> Indicates an important action.
+    </div>
+    <div class="alert alert-secondary">
+      <strong>Secondary!</strong> Indicates a slightly less important action.
+    </div>
+    <div class="alert alert-dark">
+      <strong>Dark!</strong> Dark grey alert.
+    </div>
+    <div class="alert alert-light">
+      <strong>Light!</strong> Light grey alert.
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Alert Link And Alert Close</h2>
+    <p>Add the alert-link class to any links inside the alert box to create "matching colored links".</p>
+    <div class="alert alert-success">
+      <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>. <span>(using class
+        <code>.alert-link</code>)</span>
+    </div>
+    <div class="alert alert-success alert-dismissible">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>Light!</strong> Light grey alert.
+      <p>Inspect để xem chi tiết</p>
+    </div>
+
+    <div class="alert alert-info alert-dismissible fade show">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+      <p>Thêm class <code>.fade .show</code> để có hiệu ứng mờ dần</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Button Styles</h2>
+    <button type="button" class="btn">Basic</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-link">Link</button>
+  </div>
+
+  <div class="container">
+    <p>The button classes can be used on <code>a, button, input</code> elements</p>
+    <a href="#" class="btn btn-info" role="button">Link Button</a>
+    <button type="button" class="btn btn-info">Button</button>
+    <input type="button" class="btn btn-info" value="Input Button">
+    <input type="submit" class="btn btn-info" value="Submit Button">
+  </div>
+
+  <div class="container">
+    <h2>Button Outline</h2>
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+    <button type="button" class="btn btn-outline-success">Success</button>
+    <button type="button" class="btn btn-outline-info">Info</button>
+    <button type="button" class="btn btn-outline-warning">Warning</button>
+    <button type="button" class="btn btn-outline-danger">Danger</button>
+    <button type="button" class="btn btn-outline-dark">Dark</button>
+    <button type="button" class="btn btn-outline-light text-dark">Light</button>
+  </div>
+
+  <div class="container">
+    <h2>Button Sizes</h2>
+    <button type="button" class="btn btn-primary btn-lg">Large</button>
+    <button type="button" class="btn btn-primary btn-md">Default</button>
+    <button type="button" class="btn btn-primary btn-sm">Small</button>
+  </div>
+
+  <div class="container">
+    <h2>Block Level Buttons using <code>.btn-block</code></h2>
+    <button type="button" class="btn btn-primary btn-block">Button 1</button>
+  </div>
+
+  <div class="container">
+    <h2>Button States</h2>
+    <button type="button" class="btn btn-primary">Primary Button</button>
+    <button type="button" class="btn btn-primary active">Active Primary</button>
+    <button type="button" class="btn btn-primary" disabled>Disabled Primary</button>
+    <a href="#" class="btn btn-primary disabled">Disabled Link</a>
+  </div>
+
+  <div class="container">
+    <h2>Spinner Buttons</h2>
+    <p>Add spinners to buttons:</p>
+
+    <button class="btn btn-primary">
+      <span class="spinner-border spinner-border-sm"></span>
+    </button>
+
+    <button class="btn btn-primary">
+      <span class="spinner-border spinner-border-sm"></span>
+      Loading..
+    </button>
+
+    <button class="btn btn-primary" disabled>
+      <span class="spinner-border spinner-border-sm"></span>
+      Loading..
+    </button>
+
+    <button class="btn btn-primary" disabled>
+      <span class="spinner-grow spinner-grow-sm"></span>
+      Loading..
+    </button>
+  </div>
+
+  <div class="container">
+    <h2>Button Group</h2>
+    <p>The .btn-group class creates a button group:</p>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary">Apple</button>
+      <button type="button" class="btn btn-primary">Samsung</button>
+      <button type="button" class="btn btn-primary">Sony</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Button Groups Sizes</h2>
+    <p>Add class .btn-group-* to size all buttons in a button group.</p>
+    <h3>Large Buttons:</h3>
+    <div class="btn-group btn-group-lg">
+      <button type="button" class="btn btn-primary">Apple</button>
+      <button type="button" class="btn btn-primary">Samsung</button>
+      <button type="button" class="btn btn-primary">Sony</button>
+    </div>
+    <h3>Default Buttons:</h3>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary">Apple</button>
+      <button type="button" class="btn btn-primary">Samsung</button>
+      <button type="button" class="btn btn-primary">Sony</button>
+    </div>
+    <h3>Small Buttons:</h3>
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-primary">Apple</button>
+      <button type="button" class="btn btn-primary">Samsung</button>
+      <button type="button" class="btn btn-primary">Sony</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Vertical Button Group</h2>
+    <p>Use the .btn-group-vertical class to create a vertical button group:</p>
+    <div class="btn-group-vertical">
+      <button type="button" class="btn btn-primary">Apple</button>
+      <button type="button" class="btn btn-primary">Samsung</button>
+      <button type="button" class="btn btn-primary">Sony</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Nesting Button Groups</h2>
+    <p>Nest button groups to create dropdown menus:</p>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary">Apple</button>
+      <button type="button" class="btn btn-primary">Samsung</button>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          Sony
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Tablet</a>
+          <a class="dropdown-item" href="#">Smartphone</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Split Buttons</h2>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary">Sony</button>
+      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Tablet</a>
+        <a class="dropdown-item" href="#">Smartphone</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Vertical Button Group with Dropdown</h2>
+    <div class="btn-group-vertical">
+      <button type="button" class="btn btn-primary">Apple</button>
+      <button type="button" class="btn btn-primary">Samsung</button>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          Sony
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Tablet</a>
+          <a class="dropdown-item" href="#">Smartphone</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Button Group</h2>
+    <p>Button groups are "inline" by default, which makes them appear side by side when you have multiple groups:</p>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary">Apple</button>
+      <button type="button" class="btn btn-primary">Samsung</button>
+      <button type="button" class="btn btn-primary">Sony</button>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary">BMW</button>
+      <button type="button" class="btn btn-primary">Mercedes</button>
+      <button type="button" class="btn btn-primary">Volvo</button>
+    </div>
+  </div>
+
+  <p>Badges are used to add additional information to any content. </p>
+  <div class="container">
+    <h2>Contextual Badges</h2>
+    <span class="badge badge-primary">Primary</span>
+    <span class="badge badge-secondary">Secondary</span>
+    <span class="badge badge-success">Success</span>
+    <span class="badge badge-danger">Danger</span>
+    <span class="badge badge-warning">Warning</span>
+    <span class="badge badge-info">Info</span>
+    <span class="badge badge-light">Light</span>
+    <span class="badge badge-dark">Dark</span>
+  </div>
+
+  <div class="container">
+    <h2>Pill Badges</h2>
+    <span class="badge badge-pill badge-primary">Primary</span>
+    <span class="badge badge-pill badge-secondary">Secondary</span>
+    <span class="badge badge-pill badge-success">Success</span>
+    <span class="badge badge-pill badge-danger">Danger</span>
+    <span class="badge badge-pill badge-warning">Warning</span>
+    <span class="badge badge-pill badge-info">Info</span>
+    <span class="badge badge-pill badge-light">Light</span>
+    <span class="badge badge-pill badge-dark">Dark</span>
+  </div>
+
+  <div class="container">
+    <p>An example of using a badge inside a button</p>
+    <button type="button" class="btn btn-primary">
+      Messages <span class="badge badge-light">4</span>
+    </button>
+    <button type="button" class="btn btn-danger">
+      Notifications <span class="badge badge-light">7</span>
+    </button>
+  </div>
+
+  <div class="container">
+    <h2>Basic Progress Bar</h2>
+    <div class="progress">
+      <div class="progress-bar" style="width:70%"></div>
+    </div>
+
+
+    <h2>Progress Bar Height 20px</h2>
+    <div class="progress" style="height:20px">
+      <div class="progress-bar" style="width:40%;height:20px"></div>
+    </div>
+
+    <h2>Progress Bar Labels</h2>
+    <div class="progress">
+      <div class="progress-bar" style="width:70%">70%</div>
+    </div>
+
+    <h2>Colored Progress Bar</h2>
+    <!-- Green -->
+    <div class="progress">
+      <div class="progress-bar bg-success" style="width:20%"></div>
+    </div>
+
+    <!-- Turquoise -->
+    <div class="progress">
+      <div class="progress-bar bg-info" style="width:30%"></div>
+    </div>
+
+    <!-- Orange -->
+    <div class="progress">
+      <div class="progress-bar bg-warning" style="width:40%"></div>
+    </div>
+
+    <h2>Striped Progress Bars</h2>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped" style="width:40%"></div>
+    </div>
+
+    <h2>Animated Progress Bar</h2>
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:40%"></div>
+
+    <h2>Progress bars can also be stacked:</h2>
+    <div class="progress">
+      <div class="progress-bar bg-success" style="width:40%">
+        Free Space
+      </div>
+      <div class="progress-bar bg-warning" style="width:10%">
+        Warning
+      </div>
+      <div class="progress-bar bg-danger" style="width:20%">
+        Danger
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Spinners</h2>
+    <p>To create a spinner/loader, use the <code>.spinner-border</code> class:</p>
+
+    <div class="spinner-border"></div>
+  </div>
+
+  <div class="container">
+    <h2>Colored Spinners</h2>
+    <p>Use any <strong>text color utilites</strong> to add a color to the spinner:</p>
+
+    <div class="spinner-border text-muted"></div>
+    <div class="spinner-border text-primary"></div>
+    <div class="spinner-border text-success"></div>
+    <div class="spinner-border text-info"></div>
+    <div class="spinner-border text-warning"></div>
+    <div class="spinner-border text-danger"></div>
+    <div class="spinner-border text-secondary"></div>
+    <div class="spinner-border text-dark"></div>
+    <div class="spinner-border text-light"></div>
+  </div>
+
+  <div class="container">
+    <h2>Growing Spinners</h2>
+    <p>Use the <code>.spinner-grow</code> class if you want the spinner/loader to grow instead of "spin":</p>
+
+    <div class="spinner-grow text-muted"></div>
+    <div class="spinner-grow text-primary"></div>
+    <div class="spinner-grow text-success"></div>
+    <div class="spinner-grow text-info"></div>
+    <div class="spinner-grow text-warning"></div>
+    <div class="spinner-grow text-danger"></div>
+    <div class="spinner-grow text-secondary"></div>
+    <div class="spinner-grow text-dark"></div>
+    <div class="spinner-grow text-light"></div>
+  </div>
+
+  <div class="container">
+    <h2>Spinner Size</h2>
+    <p>Use <code>.spinner-border-sm</code> or <code>.spinner-grow-sm</code> to create a smaller spinner:</p>
+
+    <div class="spinner-border spinner-border-sm"></div>
+    <div class="spinner-grow spinner-grow-sm"></div>
+  </div>
+
+  <div class="container">
+    <h2>Pagination</h2>
+    <p>To create a basic pagination, add the .pagination class to an ul element. Then add the .page-item to each li
+      element and a .page-link class to each link inside li:</p>
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>Pagination - Active State</h2>
+    <p>Add class .active to let the user know which page he/she is on:</p>
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>Pagination - Disabled State</h2>
+    <p>Add class .disabled if a page for some reason is disabled:</p>
+    <ul class="pagination">
+      <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>Pagination - Sizing</h2>
+    <p>Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks.</p>
+
+    <p>Large:</p>
+    <ul class="pagination pagination-lg">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+
+    <p>Default:</p>
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+
+    <p>Small:</p>
+    <ul class="pagination pagination-sm">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>Pagination</h2>
+    <p>Use utilitiy classes to change the alignment of the pagination:</p>
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+      <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+      <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+    </ul>
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+      <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+      <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+    </ul>
+    <ul class="pagination justify-content-end">
+      <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+      <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+      <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>Breadcrumbs</h2>
+    <p>The .breadcrumb class indicates the current page's location within a navigational hierarchy:</p>
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Photos</a></li>
+      <li class="breadcrumb-item"><a href="#">Summer 2017</a></li>
+      <li class="breadcrumb-item"><a href="#">Italy</a></li>
+      <li class="breadcrumb-item active">Rome</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>Active Item in a List Group</h2>
+    <ul class="list-group">
+      <li class="list-group-item active">Active item</li>
+      <li class="list-group-item">Second item</li>
+      <li class="list-group-item">Third item</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>List Group With Linked Items</h2>
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action">First item</a>
+      <a href="#" class="list-group-item list-group-item-action">Second item</a>
+      <a href="#" class="list-group-item list-group-item-action">Third item</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>List Group With a Disabled Item</h2>
+    <p>The disabled class adds a lighter text color to the disabled item. And if used on links, it will remove the
+      default hover effect.</p>
+    <div class="list-group">
+      <a href="#" class="list-group-item disabled">Disabled item</a>
+      <a href="#" class="list-group-item disabled">Disabled item</a>
+      <a href="#" class="list-group-item">Third item</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Flush / Remove Borders</h2>
+    <p>Use the .list-group-flush class to remove some borders and rounded corners:</p>
+  </div>
+
+  <div class="container">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">First item</li>
+      <li class="list-group-item">Second item</li>
+      <li class="list-group-item">Third item</li>
+      <li class="list-group-item">Fourth item</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>Horizontal List Groups</h2>
+    <p>The .list-group-horizontal class displays the list items horizontally instead of vertically:</p>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">First item</li>
+      <li class="list-group-item">Second item</li>
+      <li class="list-group-item">Third item</li>
+      <li class="list-group-item">Fourth item</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>List Group With Contextual Classes</h2>
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-success">Success item</li>
+      <li class="list-group-item list-group-item-secondary">Secondary item</li>
+      <li class="list-group-item list-group-item-info">Info item</li>
+      <li class="list-group-item list-group-item-warning">Warning item</li>
+      <li class="list-group-item list-group-item-danger">Danger item</li>
+      <li class="list-group-item list-group-item-primary">Primary item</li>
+      <li class="list-group-item list-group-item-dark">Dark item</li>
+      <li class="list-group-item list-group-item-light">Light item</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>Linked Items With Contextual Classes</h2>
+    <p>Move the mouse over the linked items to see the hover effect:</p>
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action">Action item</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-success">Success item</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Secondary item</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-info">Info item</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Warning item</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Danger item</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Primary item</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Dark item</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-light">Light item</a>
+    </div>
+  </div>
+
+  <div class="container mt-3">
+    <h2>List Group With Badges</h2>
+    <p>Combine .badge classes with utility/helper classes to add badges inside the list group:</p>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Inbox
+        <span class="badge badge-primary badge-pill">12</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Ads
+        <span class="badge badge-primary badge-pill">50</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Junk
+        <span class="badge badge-primary badge-pill">99</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>Basic Card</h2>
+    <div class="card">
+      <div class="card-body">Basic card</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Card Header and Footer</h2>
+    <div class="card">
+      <div class="card-header">Header</div>
+      <div class="card-body">Content</div>
+      <div class="card-footer">Footer</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Cards with Contextual Classes</h2>
+    <div class="card">
+      <div class="card-body">Basic card</div>
+    </div>
+    <br>
+    <div class="card bg-primary text-white">
+      <div class="card-body">Primary card</div>
+    </div>
+    <br>
+    <div class="card bg-success text-white">
+      <div class="card-body">Success card</div>
+    </div>
+    <br>
+    <div class="card bg-info text-white">
+      <div class="card-body">Info card</div>
+    </div>
+    <br>
+    <div class="card bg-warning text-white">
+      <div class="card-body">Warning card</div>
+    </div>
+    <br>
+    <div class="card bg-danger text-white">
+      <div class="card-body">Danger card</div>
+    </div>
+    <br>
+    <div class="card bg-secondary text-white">
+      <div class="card-body">Secondary card</div>
+    </div>
+    <br>
+    <div class="card bg-dark text-white">
+      <div class="card-body">Dark card</div>
+    </div>
+    <br>
+    <div class="card bg-light text-dark">
+      <div class="card-body">Light card</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Card titles, text, and links</h2>
+    <p>Use .card-title to add card titles to any heading element. The .card-text class is used to remove bottom margins
+      for a p element if it is the last child (or the only one) in card-body. The .card-link class adds a blue color to
+      any link, and a hover effect.</p>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text">Some example text. Some example text.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Card Image</h2>
+    <p>Image at the top (card-img-top):</p>
+    <div class="card" style="width:400px">
+      <img class="card-img-top" src="https://picsum.photos/200/200" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+    <br>
+
+    <p>Image at the bottom (card-img-bottom):</p>
+    <div class="card" style="width:400px">
+      <div class="card-body">
+        <h4 class="card-title">Jane Doe</h4>
+        <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+      <img class="card-img-bottom" src="https://picsum.photos/200/200" alt="Card image" style="width:100%">
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Stretched Link in Card</h2>
+    <p>Add the .stretched-link class to a link inside the card, and it will make the whole card clickable (the card will
+      act as a link):</p>
+    <div class="card" style="width:400px">
+      <img class="card-img-top" src="https://picsum.photos/200/200" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+        <a href="#" class="btn btn-primary stretched-link">See Profile</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Card Image Overlay</h2>
+    <p>Turn an image into a card background and use .card-img-overlay to overlay the card's text:</p>
+    <div class="card img-fluid" style="width:500px">
+      <img class="card-img-top" src="https://picsum.photos/200/200" alt="Card image" style="width:100%">
+      <div class="card-img-overlay">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. Some example text some example text. Some example text
+          some example text. Some example text some example text.</p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Cards Columns</h2>
+    <p>The .card-columns class creates a masonry-like grid of cards. The layout will automatically adjust as you insert
+      more cards.</p>
+    <p><strong>Note:</strong> The cards are displayed vertically on small screens (less than 576px):</p>
+    <div class="card-columns">
+      <div class="card bg-primary">
+        <div class="card-body text-center">
+          <p class="card-text">Some text inside the first card</p>
+        </div>
+      </div>
+      <div class="card bg-warning">
+        <div class="card-body text-center">
+          <p class="card-text">Some text inside the second card</p>
+        </div>
+      </div>
+      <div class="card bg-success">
+        <div class="card-body text-center">
+          <p class="card-text">Some text inside the third card</p>
+        </div>
+      </div>
+      <div class="card bg-danger">
+        <div class="card-body text-center">
+          <p class="card-text">Some text inside the fourth card</p>
+        </div>
+      </div>
+      <div class="card bg-light">
+        <div class="card-body text-center">
+          <p class="card-text">Some text inside the fifth card</p>
+        </div>
+      </div>
+      <div class="card bg-info">
+        <div class="card-body text-center">
+          <p class="card-text">Some text inside the sixth card</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Card Deck</h2>
+    <p>The .card-deck class creates an <strong>equal height and width</strong> grid of cards. The layout will
+      automatically adjust as you insert more cards.</p>
+    <p>In this example we have added extra content to the first card, to make it taller. Notice how the other cards
+      follow.</p>
+    <p><strong>Note:</strong> The cards are displayed vertically on small screens (less than 576px):</p>
+    <div class="card-deck">
+      <div class="card bg-primary">
+        <div class="card-body text-center">
+          <p class="card-text">Some text inside the first card</p>
+          <p class="card-text">Some more text to increase the height</p>
+          <p class="card-text">Some more text to increase the height</p>
+          <p class="card-text">Some more text to increase the height</p>
+        </div>
+      </div>
+      <div class="card bg-warning">
+        <div class="card-body text-center">
+          <p class="card-text">Some text inside the second card</p>
+        </div>
+      </div>
+      <div class="card bg-success">
+        <div class="card-body text-center">
+          <p class="card-text">Some text inside the third card</p>
+        </div>
+      </div>
+      <div class="card bg-danger">
+        <div class="card-body text-center">
+          <p class="card-text">Some text inside the fourth card</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Card Group</h2>
+    <p>The .card-group class is similar to .card-deck, which creates an <strong>equal height and width</strong> grid of
+      cards.</p>
+    <p>However, the .card-group class removes left and right margins between each card.</p>
+    <p>In this example we have added extra content to the first card, to make it taller. Notice how the other cards
+      follow.</p>
+    <p><strong>Note:</strong> The cards are displayed vertically on small screens (less than 576px),
+      <strong>WITH</strong> top and bottom margin:</p>
+    <div class="card-group">
+      <div class="card bg-primary">
+        <div class="card-body text-center">
+          <p class="card-text">Some text inside the first card</p>
+          <p class="card-text">Some more text to increase the height</p>
+          <p class="card-text">Some more text to increase the height</p>
+          <p class="card-text">Some more text to increase the height</p>
+        </div>
+      </div>
+      <div class="card bg-warning">
+        <div class="card-body text-center">
+          <p class="card-text">Some text inside the second card</p>
+        </div>
+      </div>
+      <div class="card bg-success">
+        <div class="card-body text-center">
+          <p class="card-text">Some text inside the third card</p>
+        </div>
+      </div>
+      <div class="card bg-danger">
+        <div class="card-body text-center">
+          <p class="card-text">Some text inside the fourth card</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Dropdowns</h2>
+    <p>The .dropdown class is used to indicate a dropdown menu.</p>
+    <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
+    <p>To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and data-toggle="dropdown".
+    </p>
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        Dropdown button
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Dropdowns</h2>
+    <p>The .dropdown-divider class is used to separate links inside the dropdown menu with a thin horizontal line:</p>
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        Dropdown button
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Another link</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Dropdowns</h2>
+    <p>The .dropdown-header class is used to add headers inside the dropdown menu:</p>
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        Dropdown button
+      </button>
+      <div class="dropdown-menu">
+        <h5 class="dropdown-header">Dropdown header</h5>
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+        <h5 class="dropdown-header">Dropdown header</h5>
+        <a class="dropdown-item" href="#">Another link</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Dropdowns</h2>
+    <p>The .active class adds a blue background color to the active link.</p>
+    <p>The .disabled class disables a dropdown item (grey text color and a no-parking-sign on hover).</p>
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        Dropdown button
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Normal</a>
+        <a class="dropdown-item active" href="#">Active</a>
+        <a class="dropdown-item disabled" href="#">Disabled</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Dropdowns</h2>
+    <p>Add the .dropright class next to the dropdown menu to right-align the dropdown. Note that the caret/arrows is added automatically:</p>
+    <div class="dropdown dropright">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        Dropright button
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Dropdowns</h2>
+    <p>Add the .dropleft class next to the dropdown menu to left-align the dropdown. Note that the caret/arrow is added automatically. Also note that we float the dropdown to the right:</p>
+    <div class="dropdown dropleft float-right">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        Dropleft button
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <h2>Dropdowns</h2>
+    <p>Add the .dropdown-menu-right class to .dropdown-menu to right-align the dropdown menu.</p>
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        Wide dropdown button to demonstrate this example
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Dropdowns</h2>
+    <p>The .dropup class makes the dropdown menu expand upwards instead of downwards:</p>
+    <div class="dropup">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        Dropup button
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Dropdowns</h2>
+    <p>The .dropdown-item-text class is used to add plain text to a dropdown, or used on links for default link styling.</p>                                         
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        Dropdown button
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item-text" href="#">Text Link</a>
+        <span class="dropdown-item-text">Just Text</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Simple Collapsible</h2>
+    <p>Click on the button to toggle between showing and hiding content.</p>
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+    <div id="demo" class="collapse">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Show Collapsible Content By Default</h2>
+    <p>Add the show class next to the collapse class to show the content by default.</p>
+    <p>Click on the button to toggle between showing and hiding content.</p>
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+    <div id="demo" class="collapse show">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Accordion Example</h2>
+    <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header">
+          <a class="card-link" data-toggle="collapse" href="#collapseOne">
+            Collapsible Group Item #1
+          </a>
+        </div>
+        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+          Collapsible Group Item #2
+        </a>
+        </div>
+        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+            Collapsible Group Item #3
+          </a>
+        </div>
+        <div id="collapseThree" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
