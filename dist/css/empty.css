@@ -1,0 +1,53 @@
+.form-contact {
+	background-color: white;
+}
+
+.form-contact form .input-group {
+	display: block !important;
+	padding-bottom: 15px;
+}
+
+.form-contact form .input-group label {
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.form-contact form .input-group input,
+.form-contact form .input-group select {
+	font-size: .9rem;
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: .5rem;
+	color: #000 !important;
+	border: #ddd 1px solid;
+	border-radius: 0 !important;
+}
+
+.form-contact form .button-submit {
+	font-family: montserrat, arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	width: 100%;
+	padding: 13px 20px !important;
+	cursor: pointer;
+	text-align: center;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #fff !important;
+	border: 0 !important;
+	background: #333 !important;
+}
+
+.form-contact .ads .link {
+	display: flex;
+	align-items: center;
+}
+
+.form-contact .ads .link p {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
