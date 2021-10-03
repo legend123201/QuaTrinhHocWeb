@@ -9,7 +9,6 @@
 //array.reduce() //có file riêng của nó
 //find(), findIndex() ở bên file Object.js phần Bài tập
 
-
 //---------------------------------------1 số thứ về empty array
 /*
 let emptyArray = [];
@@ -19,7 +18,7 @@ console.log(emptyArray.length); // -> 0
 console.log(emptyArray[1]); //-> undefined
 */
 
-//-------------------------------------1 số thứ về array ko rỗng 
+//-------------------------------------1 số thứ về array ko rỗng
 /*
 let numbers = [1, 2, 3, 4, 5];
 console.log(numbers); // -> [1, 2, 3, 4, 5]
@@ -27,7 +26,7 @@ console.log(numbers.length); //-> 5
 console.log(numbers[6]); //-> undefined
 
 // hồi xưa nghĩ là chạy vòng for vượt quá length sẽ ko sao -> sai
-let tong;
+let tong = 0;
 for(let i = 0; i < 10; i++){
     console.log(numbers[i]); //-> 1 2 3 4 5 undefined undefined undefined undefined undefined (mỗi cái 1 hàng)
     tong += numbers[i];
@@ -90,7 +89,6 @@ console.log(numbers.unshift("lala")); // -> 7 (số phần tử mảng)
 console.log(numbers);//-> [ 'lala', 2, 3, 4, 5, 'hello', 'tada' ]
 */
 
-
 //--------------------------------------------------------------- slice()
 /*
 //Note: The original array will not be changed.
@@ -109,7 +107,7 @@ console.log(a); //-> [ 'apple', 'viettel', 'highland' ]
 a = strings.slice(2);
 console.log(a);//-> [ 'viettel', 'highland' ]
 
-//index của mảng có 2 chiều
+//index của mảng có 2 chiều (chỉ dùng index âm ở 1 số hàm nó quy định đc thôi)
 //nếu là dương: [0,1,2,3,....]
 //nếu là âm: [...,-3,-2,-1]
 a = strings.slice(1, -1); //->"apple", "viettel" //chú ý: từ 1 đến -1 ko lấy -1

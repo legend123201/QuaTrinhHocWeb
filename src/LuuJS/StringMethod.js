@@ -7,7 +7,7 @@
 //string.toUpperCase(), string.toLowerCase()
 //string.split()
 //string.trim(), includes()
-//Number(string) (Cách 2: +string) : biến string thành number 
+//Number(string) (Cách 2: +string) : biến string thành number
 
 /*
 charAt()	        Returns the character at the specified index (position)
@@ -39,10 +39,10 @@ valueOf()	        Returns the primitive value of a String object
 
 let s = "hello baby";
 
-console.log(s.length);//-> 10
+console.log(s.length); //-> 10
 
-//string.repeat(int) -> lặp lại int lần 
-console.log(s.repeat(3));//-> hello babyhello babyhello baby (ko có dấu cách giữa các lần lặp lại)
+//string.repeat(int) -> lặp lại int lần
+console.log(s.repeat(3)); //-> hello babyhello babyhello baby (ko có dấu cách giữa các lần lặp lại)
 
 //s[index]
 console.log(s[1]); //-> e
@@ -50,7 +50,7 @@ console.log(s[1]); //-> e
 
 //charAt
 console.log(s.charAt(1)); //-> e
-console.log(s.charCodeAt(1));// -> 101
+console.log(s.charCodeAt(1)); // -> 101
 
 //string.toUpperCase()
 console.log(s.toUpperCase()); //-> HELLO BABY
@@ -61,18 +61,18 @@ console.log(s.toLowerCase()); //-> hello baby
 //string.split() -> chia chuổi ra thành mảng
 console.log(s.split()); //-> [ 'hello baby' ] (mảng 1 phần tử)
 console.log(s.split("")); //-> [ 'h', 'e', 'l', 'l', 'o', ' ', 'b', 'a', 'b', 'y' ] (trả về 1 mảng với mỗi phần tử là 1 kí tự)
-console.log(s.split("o"));//-> [ 'hell', ' baby' ] (tách theo kí tự "o")
+console.log(s.split("o")); //-> [ 'hell', ' baby' ] (tách theo kí tự "o")
 
 //string.trim() ->xoá khoảng trắng 2 bên
-console.log("  abc    ".trim());//-> abc
+console.log("  abc    ".trim()); //-> abc
 
 //includes()
 //string.includes("a") ktra có chữ a ko
 //string.includes() có phân biệt chữ hoa chữ thường
-let name = "maria ozaha";
-console.log(name.includes("a")); //->true 
-console.log(name.includes("mara")); //->false
-console.log(name.includes("M")); //-> false
+let nam = "maria ozaha";
+console.log(nam.includes("a")); //->true
+console.log(nam.includes("mara")); //->false
+console.log(nam.includes("M")); //-> false
 
 //string.endsWith() -> ko dùng Regular Expressions với hàm này đc (ví dụ: str.endsWith("/universE./i") -> lỗi cú pháp)
 var str = "Hello world, welcome to the universe.";

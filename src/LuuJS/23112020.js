@@ -1,21 +1,23 @@
 $(document).ready(function () {
-    $(".owl-carousel").owlCarousel(
-        //những option bên dưới ở chỗ api web owl carousel
-        {
-            items: 1,
-            margin: 20,
-            loop: true,
-            autoplay: true,
-            autoplayTimeout: 5000, 
-            center: true,
-            nav: true,
-            navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
-            dots: true,
-            dotsEach: 2
-        }
-    );
+  $(".owl-carousel").owlCarousel(
+    //những option bên dưới ở chỗ api web owl carousel
+    {
+      items: 1,
+      margin: 20,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      center: true,
+      nav: true,
+      navText: [
+        '<i class="fas fa-chevron-left"></i>',
+        '<i class="fas fa-chevron-right"></i>',
+      ],
+      dots: true,
+      dotsEach: 2,
+    }
+  );
 });
-
 
 /*
 //jqdoc

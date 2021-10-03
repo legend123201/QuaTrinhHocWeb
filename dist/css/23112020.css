@@ -1,3 +1,7 @@
+.slider .item img {
+	height: 200px;
+}
+
 .owl-dot.active span {
 	background-color: red !important;
 }

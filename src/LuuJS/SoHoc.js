@@ -1,17 +1,15 @@
 //isNaN(number), Number(sth)
-//number.toString() (cách 2: number + "")
+//number.toString() (cách 2: number + "", cách 3: String(number))
 //parseInt(number)
-
-
 
 //isNaN(number)
 console.log(isNaN(23)); //false
 
 //Number(sth)
 //ép kiểu qua số, luôn luôn ép kiểu của nó qua số được, nhưng giá trị có thể là NaN
-console.log(typeof(Number("123"))); //->number
-console.log(typeof(Number("12a"))); //->number
-console.log(typeof(Number("abc"))); //->number
+console.log(typeof Number("123")); //->number
+console.log(typeof Number("12a")); //->number
+console.log(typeof Number("abc")); //->number
 console.log(Number("123")); //->123
 console.log(Number("12a")); //->NaN
 console.log(Number("abc")); //->NaN

@@ -13,79 +13,78 @@ Functions are always objects
 Objects are always objects
 */
 
-
 //object
 //Objects are mutable: They are addressed by reference, not by value.
 //key-value
 let user = {
-    name: "Maria ozaha",
-    age: 18,
-    "1": 3,
-    1: 5
+  name: "Maria ozaha",
+  age: 18,
+  1: 3,
+  1: 5,
 };
 
 console.log(user.name);
 console.log(user.age);
 //console.log(user.1); //-> lỗi
 //console.log(user."1"); //-> lỗi
-console.log(user['name']);
-console.log(user['age']);
+console.log(user["name"]);
+console.log(user["age"]);
 console.log(user[1]); //->5
-console.log(user["1"]);//->5
+console.log(user["1"]); //->5
 console.log(user[2]); //-> undefined
 //trường hợp key là string có thể biến thành số thì dùng key chuỗi hay key số đều là 1, ở trên có 2 cái key đều có thể mang ý nghĩa là 1, thì giá trị nó lấy cái cuối cùng xuất hiện
-//thầy Nhất said: key là số thì tự động biến thành chuỗi 
+//thầy Nhất said: key là số thì tự động biến thành chuỗi
 
 //object có thể duyệt qua các key hoặc value của nó bằng for...in loop
 var person = {
-    fname: "John",
-    lname: "Doe",
-    age: 25,
-    fullName: function () {
-        return this.firstName + " " + this.lastName;
-    }
+  fname: "John",
+  lname: "Doe",
+  age: 25,
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  },
 };
 let txt = "";
 for (x in person) {
-    txt += person[x];
+  //x là key, person[x] là giá trị của key đó
+  txt += person[x];
 }
 console.log(txt); //-> John Doe 25
 
 //có thể tạo thêm Properties và xoá Properties cho object chỉ định (chuyên sâu thì tìm ko thì thôi: nếu xoá Properties của objects prototype thì tất cả các objects sẽ mất Properties đó)
 //thêm (nhưng lưu ý 1 điều, là thêm như này thì cái contructor object mình tạo (nếu có) thì nó ko tự thêm, tại là mình tự tạo constructor đó mà, chỉ object chỉ định mới có cái Properties mới thêm đó)
 person.nationality = "English";
-console.log(person);//-> {fname:"John", lname:"Doe", age:25, nationality:"English"}
+console.log(person); //-> {fname:"John", lname:"Doe", age:25, nationality:"English"}
 //xoá
-nationality = "English"
 delete person.age;
-console.log(person);//-> {fname:"John", lname:"Doe", nationality:"English"}
+console.log(person); //-> {fname:"John", lname:"Doe", nationality:"English"}
 
 //methods trong objects
 var aGirl = {
-    firstName: "Lacy",
-    lastName: "King",
-    age: 28,
-    fullName: function () {
-        return this.firstName + " " + this.lastName;
-    }
+  firstName: "Lacy",
+  lastName: "King",
+  age: 28,
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  },
 };
-console.log(aGirl.fullName());//-> Lacy King
+console.log(aGirl.fullName()); //-> Lacy King
 //add methods vào đc luôn
-aGirl.newFunc = function(){
-    console.log("i am a new func");
-}
+aGirl.newFunc = function () {
+  console.log("i am a new func");
+};
 aGirl.newFunc(); //i am a new func
 
 //biến objects thành array
-var person2 = {name:"John", age:30, city:"New York"};
+var person2 = { name: "John", age: 30, city: "New York" };
 var myArray = Object.values(person2);
 console.log(myArray); //-> [ 'John', 30, 'New York' ]
 
 //biến objects thành string
-var myString = JSON.stringify(person2);
-console.log(myString);//-> {"name":"John","age":30,"city":"New York"}
+var myString = JSON.stringify(person2); //cách 2: var myString = String(person2)
+console.log(myString); //-> {"name":"John","age":30,"city":"New York"}
 
-var testObj = {a: 1, a: 2, b: 3, c: 4, b: 5};
+var testObj = { a: 1, a: 2, b: 3, c: 4, b: 5 };
 console.log(testObj); //-> { a: 2, b: 5, c: 4 } (bị trùng thì nó lấy cái cuối xuất hiện, giống y chang trường hợp 1 và "1" đầu tiên)
 
 //-------------------3 cách để kiểm tra xem object có thuộc tính nào đó hay ko
@@ -116,7 +115,7 @@ hero.realName; // => undefined
 */
 
 //NGOÀI RA: còn có constructor, getter, setter, prototype để thêm properties cho constructor, và nhiều hàm có sẵn như isFrozen(),...
-//đụng tới thì tìm hiểu thêm 
+//đụng tới thì tìm hiểu thêm
 
 /*
 //BÀI TẬP về objects

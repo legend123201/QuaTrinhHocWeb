@@ -1,53 +1,56 @@
-.slider{
-    
+.slider {
+  .item {
+    img {
+      height: 200px;
+    }
+  }
 }
 
 .owl-dot {
-    &.active {
-        span {
-            background-color: red !important;
-        }
+  &.active {
+    span {
+      background-color: red !important;
     }
-    &:hover{
-        span{
-            background-color: yellow !important;
-        }
+  }
+  &:hover {
+    span {
+      background-color: yellow !important;
     }
+  }
 }
 .owl-nav button:hover {
   background: none !important;
   color: inherit !important; //khi hover vào thì mất luôn cái icon nên thêm dòng này vào
 }
 
-.owl-item.active{
-    .item{
-        position: relative;
-        .item-content{
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            h2{
-                animation: floatY 0.4s 0.5s forwards;
-                opacity: 0;
-            }
-            button {
-                animation: floatY 0.4s 1s forwards;
-                opacity: 0;
-            }
-        }
-        
+.owl-item.active {
+  .item {
+    position: relative;
+    .item-content {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      h2 {
+        animation: floatY 0.4s 0.5s forwards;
+        opacity: 0;
+      }
+      button {
+        animation: floatY 0.4s 1s forwards;
+        opacity: 0;
+      }
     }
+  }
 }
 
-@keyframes floatY{
-    0%{
-        transform: translateY(-20px);
-    }
+@keyframes floatY {
+  0% {
+    transform: translateY(-20px);
+  }
 
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 //fixed và absolute thì các phần tử dưới sẽ chèn lên vị trí của nó, relative thì ko
 //!important để ưu tiên css chỗ chỉ định
