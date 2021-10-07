@@ -7,7 +7,7 @@
 //slice()
 //splice()
 //array.reduce() //có file riêng của nó
-//find(), findIndex() ở bên file Object.js phần Bài tập
+//find(), findIndex()
 
 //---------------------------------------1 số thứ về empty array
 /*
@@ -159,3 +159,30 @@ console.log(strings.splice(2, 100));//-> [ 'name', 'lala', 'pumpum', 'highland' 
 console.log(strings);// [ 'samsung', 'apple' ]
 console.log(strings.splice(2)); //cắt từ index 2 về cuối //-> []
 */
+
+//---------------------------------------------------------------find(), findIndex()  ở bên file Object.js phần Bài tập
+//hàm find() tìm và trả về "index của phần tử" đầu tiên trong mảng thỏa điều kiện sau return, thích hợp để tìm phần tử trong mảng và update phần tử đó trong mảng (còn đc gọi là update mảng đó)
+const handleDoneTodo = (id) => {
+  let copyList = [...todoList];
+
+  //tìm phần tử todo trong mảng và set active
+  let updateItemIndex = copyList.findIndex((item) => item.id === id);
+  copyList[updateItemIndex].status = "active";
+
+  //làm mới todo list
+  setTodoList(copyList);
+};
+
+// hàm find() tìm và trả về "phần tử" đầu tiên trong mảng thỏa điều kiện sau return, thích hợp để kiếm phần tử theo id hoặc cái gì đó unique như username password
+const login = () => {
+  let findUser = userList.find((item) => {
+    return item.userName === user.userName && item.password === user.password;
+  });
+
+  if (findUser) {
+    setUser(findUser);
+    history.push("/todo");
+  } else {
+    alert("Thông tin đăng nhập chưa hợp lệ! Vui lòng nhập lại!");
+  }
+};
