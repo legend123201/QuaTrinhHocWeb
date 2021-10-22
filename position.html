@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="dist\css\reset.css" />
+    <link rel="stylesheet" href="dist\css\position.css" />
+    <link rel="stylesheet" href="dist\css\all.min.css" />
+    <title>Ktra</title>
+  </head>
+
+  <body>
+    <ul class="max-width-1000">
+      <li>
+        - Position absolute ko né padding của thằng cha, nhưng lại né border của
+        thằng cha, margin của thằng cha đương nhiên là ko liên quan, né như
+        thường (ô màu cam có padding).
+      </li>
+      <li>
+        - Ô màu xanh bên trái né border của ô màu tím, vì nó là con của ô màu
+        tím.
+      </li>
+      <li>
+        - Ô màu xanh bên phải dính sát mép luôn vì nó ko phải con của ô màu tím,
+        nó là anh em cùng cha ".wrapper" với ô màu tím.
+      </li>
+    </ul>
+    <div class="main2">
+      <div class="box box-white box-white-1"></div>
+      <div class="box box-perple box-perple-1">
+        <div class="box box-blue box-blue-1"></div>
+        <div class="box box-white box-white-2"></div>
+      </div>
+      <div class="wrapper">
+        <div class="box box-blue box-blue-2"></div>
+        <div class="box box-perple box-perple-2">
+          <div class="box box-white box-white-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <h1>Lý thuyết:</h1>
+    <ul class="max-width-1000">
+      <li>
+        - Nếu thing cha mà có z-index và thing con cũng có z-index, thì dù đặt
+        số thế nào thì thing con cũng đè lên thing cha (lúc này z-index của
+        thing cha dùng để đọ sức với z-index của 1 thing khác cũng là cha giống
+        nó, như là 2 gia đình đấu nhau, cha mình có index cao thì dù con có âm
+        bao nhiêu cũng nổi lên đằng trước cái thing cha kia và con của thing cha
+        kia.
+      </li>
+      <li>
+        - Thing cha ko có z-index, thing con có z-index âm thì thing con mới đè
+        lên thing cha đc.
+      </li>
+    </ul>
+    <p>
+      - z-index của thing cha để xác định text trong nó với thing con)(z-index
+      của con dùng để xác định với các con khác cùng cha với nó).
+    </p>
+
+    <h1>Thực hành:</h1>
+    <p class="max-width-1000">
+      - Đỏ là cha (z-index: 1) có con là xanh dương (z-index: 2) và xanh lá
+      (z-index: -1), như ta thấy 2 thằng nó đều đè lên cha dù xanh lá có z-index
+      nhỏ hơn của cha.
+    </p>
+    <div
+      class="parent-1"
+      style="
+        position: relative;
+        z-index: 1;
+        background-color: red;
+        width: 100px;
+        height: 100px;
+      "
+    >
+      <div
+        class="child-1-1"
+        style="
+          position: absolute;
+          z-index: 2;
+          background-color: blue;
+          width: 50px;
+          height: 50px;
+        "
+      ></div>
+      <div
+        class="child-1-2"
+        style="
+          position: absolute;
+          bottom: 0;
+          z-index: -1;
+          background-color: green;
+          width: 50px;
+          height: 50px;
+        "
+      ></div>
+    </div>
+
+    <div style="margin-top: 50px"></div>
+    <p class="max-width-1000">
+      - Đỏ là cha (ko có z-index) có con là xanh dương (z-index: 1) và xanh lá
+      (z-index: -1), như ta thấy thằng con âm ko đè lên thằng cha đc.
+    </p>
+    <div
+      class="parent-2"
+      style="
+        position: relative;
+        background-color: red;
+        width: 100px;
+        height: 100px;
+      "
+    >
+      <div
+        class="child-2-1"
+        style="
+          position: absolute;
+          z-index: 1;
+          background-color: blue;
+          width: 50px;
+          height: 50px;
+        "
+      ></div>
+      <div
+        class="child-2-2"
+        style="
+          position: absolute;
+          bottom: 0;
+          z-index: -1;
+          background-color: green;
+          width: 50px;
+          height: 50px;
+        "
+      ></div>
+    </div>
+
+    <div style="margin-top: 50px"></div>
+    <p class="max-width-1000">
+      - Nâu là cha thứ nhất (z-index: 10) có con là xanh lá (z-index: -1) và
+      xanh dương (z-index: -3).
+    </p>
+    <p class="max-width-1000">
+      - Đen là cha thứ hai (z-index: 111) có con là vàng (z-index: -2222).
+    </p>
+    <p class="max-width-1000">
+      - Như ta thấy vàng có z-index âm lớn nhưng vẫn đè lên cao nhất, vì cha nó
+      có z-index thì nó luôn đè trên cha nó, và cha nó z-index lớn hơn cha thằng
+      nâu nên nó đè lên cha con thằng nâu luôn.
+    </p>
+
+    <div style="margin-top: 50px"></div>
+    <div
+      class="parent-3-1"
+      style="
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background: chocolate;
+        z-index: 10;
+      "
+    >
+      <div
+        class="child-3-1"
+        style="
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 50%;
+          height: 50%;
+          background-color: chartreuse;
+          transform: rotate(45deg);
+          z-index: -1;
+        "
+      ></div>
+      <div
+        class="child-3-2"
+        style="
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 50%;
+          height: 50%;
+          background-color: blue;
+          transform: rotate(45deg);
+          z-index: -3;
+        "
+      ></div>
+    </div>
+    <div
+      class="parent-3-2"
+      style="
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background: black;
+        z-index: 111;
+        bottom: 50px;
+      "
+    >
+      <div
+        class="child-3-3"
+        style="
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 80%;
+          height: 80%;
+          background-color: yellow;
+          transform: rotate(-15deg);
+          z-index: -2222;
+        "
+      ></div>
+    </div>
+
+    <div style="margin-top: 50px"></div>
+    <p class="max-width-1000">
+      - Thằng cha màu đỏ (z-index là 5) có con là text Hello-1 (ko có z-index)
+      và thẻ h1 là Hello-2 (ko có z-index) và 1 thằng div có background trắng
+      nhạt (z-index: -1), thì ta thấy cái trắng đè lên cha nó là màu đỏ, tất
+      nhiên rồi vì nó luôn đè lên thằng cha khi cha có z-index, và nó nằm dưới 2
+      cái chữ.
+    </p>
+    <p class="max-width-1000">
+      - Nếu ta đổi z-index của background trắng nhạt thành 1->4 thì nó sẽ đè lên
+      tất cả, vì 2 cái text kia mặc định có z-index là 0.
+    </p>
+    <p class="max-width-1000">
+      - Thường làm background overlay thì ngta dùng after hoặc before chứ ko tạo
+      thêm class con.
+    </p>
+    <div style="margin-top: 50px"></div>
+    <div
+      class="parent-4"
+      style="
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        z-index: 5;
+      "
+    >
+      Hello-1
+      <h1 style="color: black">Hello-2</h1>
+      <div
+        class="child-4"
+        style="
+          position: absolute;
+          background-color: rgba(255, 255, 255, 0.6);
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        "
+      ></div>
+    </div>
+    <div style="margin-top: 50px"></div>
+    <p class="max-width-1000">
+      Ví dụ này chỉ cần để ý cái màu trắng, cha nó là tím ko có z-index, nó có
+      z-index âm thì nó sẽ nằm dưới cha nó thôi.
+    </p>
+    <div class="bt2 flex j-center">
+      <div class="main3">
+        <div class="title">
+          <span>Guu cuộc sống</span>
+        </div>
+        <div class="image">
+          <img src="https://picsum.photos/200/300" alt="" />
+        </div>
+        <div class="info flex j-between a-center">
+          <div class="info-group flex a-center">
+            <div class="image">
+              <img src="https://picsum.photos/200/300" alt="" />
+            </div>
+            <div class="name">
+              <b>Thu Hằng</b>
+            </div>
+          </div>
+          <div class="likes-number flex">
+            <i class="fas fa-thumbs-up"></i>
+            <span class="descrip">Thích</span>
+            <span class="number">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

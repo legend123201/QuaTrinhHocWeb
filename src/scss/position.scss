@@ -1,0 +1,151 @@
+@import "flex";
+
+body {
+  padding: 20px;
+}
+
+.max-width-1000 {
+  max-width: 1000px;
+}
+
+.main2 {
+  width: 300px;
+  height: 300px;
+  background-color: orange;
+  position: relative;
+  margin-top: 20px;
+  padding: 10px;
+
+  .box {
+    border: 5px solid black;
+  }
+
+  .box-white {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+  }
+  .box-perple {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+  }
+  .box-blue {
+    width: 50px;
+    height: 20px;
+    background-color: blue;
+  }
+
+  .box-white-1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .box-perple-1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    .box-white-2 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .box-blue-1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+    }
+  }
+  .wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    .box-blue-2 {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateY(-100%);
+    }
+    .box-perple-2 {
+      position: relative;
+
+      .box-white-3 {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+}
+
+.bt2 {
+  .main3 {
+    width: 500px;
+    position: relative;
+
+    .title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgb(100, 173, 241);
+      padding: 10px;
+      width: fit-content;
+      span {
+        color: white;
+      }
+    }
+    > .image {
+      height: 300px;
+      //thêm dòng này để cái tam giác màu trắng nằm trên nó, thử cmt sẽ thấy
+      //cách 2: có thể tạo 1 caí div bao quanh cái title và cái ảnh này, rồi cho cả cái div đó zindex nhỏ hơn zindex của cái div info
+      //cách 2 sai vì nếu cha có zindex thì cái con luôn đè lên cái cha, nghĩa là cái tam giác trắng đè lên bachground màu tím
+      position: relative;
+      z-index: -99;
+      //
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .info {
+      padding: 5px 0;
+      position: relative;
+      background-color: blueviolet;
+      //z-index: 1;
+      .info-group {
+        .image {
+          width: 50px;
+          height: 50px;
+          margin-right: 10px;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+      }
+      .likes-number {
+        background-color: rgba(blue, 0.8);
+        color: white;
+        border-radius: 5px;
+        font-size: 14px;
+        * {
+          padding: 5px;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        transform: rotate(45deg);
+        z-index: -1;
+      }
+    }
+  }
+}
