@@ -28,6 +28,7 @@ console.log({ user: 1 }); //-> { user: 1 } (cái này ko phải là string)
 //-------------------------------------spread operator----------------------------
 //xài cho 2 cái này thì mới là spread operator: [], {} => reference type
 //đây là cách nhanh nhất để copy arr và object, và nhanh nhất để nối array vì array ko có hàm concat như của string
+//NHƯNG CLONE ARRAY MÀ PHẦN TỬ CỦA NÓ LÀ OBJECT THÌ KO ĐC, NHỮNG OBJECT ĐÓ VẪN LÀ THAM CHIẾU (xem ví dụ ở dưới), MẢNG LÀ MẢNG MỚI (ĐỊA CHỈ MỚI) NHƯNG PHẦN TỬ VẪN LÀ THAM CHIẾU, SỢT MẠNG "DEEP CLONING OBJECT" ĐỂ BIẾT CÁCH CLONE
 //và cũng là nhanh nhất để tạo new object bằng constructor cho objects nếu như params mình để trong 1 cái array sẵn rồi, và dùng hàm max cho array cũng dùng cái này vì hàm max ko dùng cho array đc
 
 //trong trường hợp này thì nó vẫn là rest, xài trên hàm như này thì nó là rest, ko có a và b thì nó lấy hết thôi
@@ -62,3 +63,46 @@ cold.push(...warm);
 console.log(cold); //-> [ 'autumn', 'winter', 'spring', 'summer' ]
 
 //cái này cũng dùng để thay đổi giá trị của thuộc tính có sẵn bằng viêc ghi đè giá trị ở cuối object, xem trong file object để thấy rõ hơn
+
+//-----------các trường hợp mình gặp khi đi làm cty-----------------
+//-------TH1: mình có thể loại trừ thuộc tính mình chỉ định trong object. (đây là rest operator)
+let varibleA = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+// loại trừ thuộc tính "a"
+let { a, ...rest } = varibleA;
+console.log(rest); // => { b: 2, c: 3 }
+
+//-------TH2: mình có thể loại trừ thuộc tính mình chỉ định trong object. (đây là spread operator)
+let initialValue = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+// sửa lại thuộc tính b và c
+let fixValue = {
+  a: 1,
+  b: 10,
+  c: 11,
+};
+
+let finalValue = {
+  ...initialValue,
+  ...fixValue,
+  c: 50,
+};
+
+console.log(finalValue); // => { a: 1, b: 10, c: 50 }
+// 2 trường hợp này lại cho mình 1 cách nhìn rõ về sự khác nhau giữa rest và spread operator, rest thì là liệt kê những cái còn lại, còn spread là liệt kê tất cả và cái nào trùng thì ghi đè.
+
+// CLONE ARRAY OF OBJECT
+const studentList = [
+  { id: 1, name: "Alice", age: 11, gender: "female" },
+  { id: 2, name: "Bob", age: 12, gender: "male" },
+];
+const newList = [...studentList];
+newList[0].name = "Đã bị thay đổi";
+console.log(studentList[0].name); // => "Đã bị thay đổi"
