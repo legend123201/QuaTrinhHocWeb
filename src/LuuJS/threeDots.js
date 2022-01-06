@@ -75,7 +75,7 @@ let varibleA = {
 let { a, ...rest } = varibleA;
 console.log(rest); // => { b: 2, c: 3 }
 
-//-------TH2: mình có thể loại trừ thuộc tính mình chỉ định trong object. (đây là spread operator)
+//-------TH2: mình có thể ghi đè thuộc tính, thêm thuộc tính trong object. (đây là spread operator)
 let initialValue = {
   a: 1,
   b: 2,
@@ -97,6 +97,7 @@ let finalValue = {
 
 console.log(finalValue); // => { a: 1, b: 10, c: 50 }
 // 2 trường hợp này lại cho mình 1 cách nhìn rõ về sự khác nhau giữa rest và spread operator, rest thì là liệt kê những cái còn lại, còn spread là liệt kê tất cả và cái nào trùng thì ghi đè.
+// rest thì nằm trên tên hàm, hoặc nằm bên trái dấu bằng "=" trong phép gán, còn spread thì nằm bên phải dấu bằng "=" trong phép gán
 
 // CLONE ARRAY OF OBJECT
 const studentList = [

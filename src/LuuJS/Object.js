@@ -119,6 +119,8 @@ hero.realName; // => undefined
 
 /*
 //BÀI TẬP về objects
+//những hàm phía dưới là array method
+
 users = [
     {
         name: "User1",
