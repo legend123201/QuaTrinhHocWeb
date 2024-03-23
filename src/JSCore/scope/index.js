@@ -1,3 +1,16 @@
+/*
+------------------------LÝ THUYẾT
+- Scope: phạm vi sử dụng 1 biến.
+
+- Có 3 loại scope: block scope, global scope, function scope.
++ block scope (if, for, while, switch): let, const.
++ function scope: let, const, var. 
+Chú ý: var nó đi tìm cái function gần nhất và chỉ đc phép hoạt động trong cái function đó và nó có thể dùng từ mọi nơi trong fuction đó cho dù nó được khai báo ở đâu trong function.
++ global scope: let, const, var.
+
+*/
+
+
 // global scope
 var f;
 let t;
