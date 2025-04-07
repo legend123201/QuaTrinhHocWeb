@@ -1,0 +1,12 @@
+- Link doc: https://topdev.vn/blog/thuat-toan-quy-hoach-dong/
+- Lý thuyết: Quy hoạch động (dynamic programming) là một phương pháp được sử dụng trong toán học và khoa học máy 
+tính để giải quyết các vấn đề phức tạp bằng cách chia chúng thành các bài toán con đơn giản hơn. Bằng cách giải 
+mỗi bài toán con chỉ một lần và *lưu trữ kết quả*, nó tránh được các phép tính dư thừa, dẫn đến giải pháp hiệu quả 
+hơn cho nhiều bài toán.
+
+- Thường thì một bài toán có đủ cả hai tính chất này, chúng ta có thể dùng quy hoạch động được:
++ Bài toán có các bài toán con gối nhau.
++ Bài toán có cấu trúc con tối ưu.
+
+- Ưu điểm: đã cache data nên ko phải tính toán lại.
+- Nhược: tốn bộ nhớ, khó làm.

@@ -1,0 +1,8 @@
+{
+	"liveServer.settings.port": 5501,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	// thêm dòng dưới này vào thì mới ăn, dòng này mình đọc trong doc extension
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
+}

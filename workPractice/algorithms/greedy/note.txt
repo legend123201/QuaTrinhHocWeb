@@ -1,0 +1,5 @@
+- Link doc: https://www.youtube.com/watch?v=tx5saBiltJU
+- Thuật toán này tên là tham lam là vì nó chỉ xét những điều kiện ở hiện tại đang có, ko quan tâm tới các điều kiện ở quá khứ hay tương lai. 
+Chọn điều kiện tốt nhất ở hiện tại là được, chỉ tối ưu hóa cục bộ, chưa chắc tối ưu hóa toàn cục.
+- Ưu điểm: nhanh, đơn giản, hiệu quả với những bài toán ko cần độ chính xác cao.
+- Nhược điểm: có thể bài toán tổng thể ko được tối ưu nhất.

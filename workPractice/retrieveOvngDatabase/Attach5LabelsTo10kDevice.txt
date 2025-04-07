@@ -1,0 +1,26 @@
+let devices = await db
+		.collection('device')
+		.find({ organization: new ObjectId('666a5eebfe85548682b290f7') })
+		.limit(10000)
+		.toArray();
+	let labels = await db
+		.collection('devicelabel')
+		.find({ organization: new ObjectId('666a5eebfe85548682b290f7') })
+		.limit(10000)
+		.toArray();
+
+	let deviceIds = devices.map((e) => e._id);
+	let labelIds = labels.map((e) => e._id);
+
+	let createDeviceLabelDeviceData = [];
+	devices.forEach((device) => {
+		let shuffled_array = _.shuffle(labelIds);
+		for (let i = 0; i < 5; i++) {
+			createDeviceLabelDeviceData.push({
+				device: device._id,
+				deviceLabel: shuffled_array[i],
+			});
+		}
+	});
+
+	let res = await db.collection('devicelabeldevice').insertMany(createDeviceLabelDeviceData);
