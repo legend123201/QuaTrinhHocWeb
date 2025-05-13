@@ -6,46 +6,39 @@
 => Nghĩa là: tìm text có prefix là "sails.log.info", theo sau là 0 hoặc nhiều kí tự bất kì (".*"), và cuối cùng là có dấu phẩy ","
 */
 
-function isURL(str) {
-    var urlRegex = /^(http(s)?:\/\/)?([\w-]+\.)+[\w-]+(\/[\w- ;,./?%&=]*)?$/; // define a regex here
-    var url = new RegExp(urlRegex, 'i');
-    return str.length < 2083 && url.test(str);
+// .test() return true if the string match
+/*
+const regex = /your-pattern/;
+const str = "your test string";
+
+if (regex.test(str)) {
+  console.log("✅ Match!");
+} else {
+  console.log("❌ No match.");
 }
-var check = [
-    'http://www.foufos.gr',
-    'https://www.foufos.gr',
-    'http://foufos.gr',
-    'http://www.foufos.gr/kino',
-    'http://werer.gr',
-    'www.foufos.gr',
-    'www.mp3.com',
-    'www.t.co',
-    'http://t.co',
-    'http://www.t.co',
-    'https://www.t.co',
-    'www.aa.com',
-    'http://aa.com',
-    'http://aaa.com',
-    'http://www.aa.com',
-    'https://www.aa.com',
-    'www.foufos',
-    'www.foufos-.gr',
-    'www.-foufos.gr',
-    'foufos.gr',
-    'http://www.foufos',
-    'http://foufos',
-    'www.mp3#.com',
-    'www.mp3/#/dsd.com',
-    "https://tmadevdebug.dev.activation.ovng.myovcloud.com",
-    "https://debug.dev.myovcloud.com/#/pyfvr2elx1y0zb/"
+*/
+
+// .match() return groups of the string follow by the regex rules
+const regex = /^(?![-.])[A-Za-z0-9_.-]{0,50}(?<!\.)$/;
+const strings = [
+	"abc123",
+	"a.b-c_123",
+	"abc.def.ghi",
+	"a-b_c.d",
+	"a".repeat(50),
+	"",
+	".abc",
+	"-hello",
+	"abc.",
+	"abc@123",
+	"a".repeat(51)
 ];
 
-for (let index = 0; index < check.length; index++) {
-    var url = check[index]
-    if (isURL(check[index]))
-        console.log(`${url}         ✔`);
-    else {
-        console.log(`${url}          ❌`);
-    }
-
+for (let i = 0; i < strings.length; i++) {
+	const match = strings[i].match(regex);
+	if (match) {
+		console.log("Matched:", JSON.stringify(match));
+	} else {
+		console.log("No match:", strings[i]);
+	}
 }
