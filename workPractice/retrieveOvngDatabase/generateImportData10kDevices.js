@@ -4,7 +4,7 @@ const bodyData = {
 	managementMode: 'FullManagement',
 	licenseMode: 'EXPIRE_LAST',
 	devices: [],
-	groupId: '666a5eebfe85548682b29102', // nếu là AOS thì cho field này là string rỗng là được
+	groupId: '690c1cf2fcf42a62b20a412b', // nếu là AOS thì cho field này là string rỗng là được
 };
 
 // for (let i = 0; i < 1000; i++) {
@@ -14,9 +14,9 @@ const bodyData = {
 // 	});
 // }
 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 7000; i++) {
 	bodyData.devices.push({
-		serialNumber: `ONDEVS2002N${i + 1}`,
+		serialNumber: `ONDEVS2411N${String(i).padStart(4, "0")}`,
 		deviceFamily: 'AP',
 	});
 }

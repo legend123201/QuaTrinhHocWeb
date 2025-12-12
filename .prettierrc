@@ -1,5 +1,5 @@
 {
-	"printWidth": 200,
+	"printWidth": 80,
 	"arrowParens": "always",
 	"semi": true,
 	"tabWidth": 2,
@@ -8,5 +8,5 @@
 	"bracketSpacing": true,
 	"endOfLine": "auto",
 	"singleAttributePerLine": true,
-	"trailingComma": "none"
+	"trailingComma": "all"
 }

@@ -5,8 +5,8 @@
 */
 
 const test = () => {
-  console.time("check");
-  console.timeLog("check");
+  console.time("🥑 check");
+  console.timeLog("🥑 check");
 
   let a = 0;
 
@@ -14,13 +14,13 @@ const test = () => {
     a = a + 1;
   }
 
-  console.timeLog("check");
+  console.timeLog("🥑 check");
 
   for (let i = 0; i < 100000000; i++) {
     a = a + 1;
   }
 
-  console.timeEnd("check");
+  console.timeEnd("🥑 check");
 };
 
 test();

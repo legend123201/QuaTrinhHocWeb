@@ -10,13 +10,13 @@ const functions = require("../comparePropsInObjects/functions");
 const _ = require("lodash");
 
 // constant
-// const connectionString = "mongodb://localhost:28015/?directConnection=true"; // (case 1)
+const connectionString = "mongodb://localhost:28015/?directConnection=true"; // (case 1)
 // const connectionString = "mongodb://localhost:27017/?directConnection=true"; // (case 2)
-const connectionString = "mongodb://11.11.7.151:27017/?directConnection=true"; // DoopL MongoDB
+// const connectionString = "mongodb://11.11.7.151:27017/?directConnection=true"; // DoopL MongoDB
 // const connectionString = "mongodb://172.16.90.101:32717/?directConnection=true";
 const client = new MongoClient(connectionString);
-// const dbName = "ovng";
-const dbName = "doopl";
+const dbName = "ovng";
+// const dbName = "doopl";
 
 async function main() {
 	try {
@@ -47,48 +47,161 @@ async function main() {
 const dynamicFunction = async (db) => {
 	let res, res1, res2, res3, res4;
 
-	res = await db.collection("notifications").find({}).sort({ createdAt: -1 }).toArray();
-	const stringDataRecords = [];
-	const stringDataRecordIds = [];
-	res.forEach((e) => {
-		if (typeof e.data === "string") {
-			stringDataRecords.push(e);
-			stringDataRecordIds.push(new ObjectId(e._id));
+	/*
+	res = await db.collection("subscriptionlicense").insertMany([
+		{
+			coterm: true,
+			subscriptionId: "OVCX-2025OF9999",
+			activationCode: "235dfa83-8536-348c-ae7e-bd2952449999",
+			expiredDate: 1852185233000,
+			activationDate: 1757492847387,
+			gracePeriod: 3,
+			licenseType: "Base",
+			licenseConsumed: [
+				{
+					consumed: {
+						"OVCX-68": 0,
+						"OVCX-69": 0,
+						"OVCX-APH": 0,
+						"OVCX-65": 0,
+						"OVCX-APL": 0,
+						"OVCX-63": 0,
+						"OVCX-64": 0,
+						"OVCX-99": 0
+					}
+				}
+			],
+			orderedLicenses: [],
+			dlLicenses: [
+				{
+					productId: "OVCX-APH-3Y",
+					units: [
+						{
+							maxCount: 5,
+							unitId: "OVCX-APH"
+						}
+					],
+					expiredDate: 1852185233000,
+					gracePeriod: 90
+				},
+				{
+					productId: "OVCX-APL-3Y",
+					units: [
+						{
+							maxCount: 5,
+							unitId: "OVCX-APL"
+						}
+					],
+					expiredDate: 1852185233000,
+					gracePeriod: 90
+				},
+				{
+					productId: "OVCX-64-3Y",
+					units: [
+						{
+							maxCount: 5,
+							unitId: "OVCX-64"
+						}
+					],
+					expiredDate: 1852185233000,
+					gracePeriod: 90
+				},
+				{
+					productId: "OVCX-99-3Y",
+					units: [
+						{
+							maxCount: 5,
+							unitId: "OVCX-99"
+						}
+					],
+					expiredDate: 1852185233000,
+					gracePeriod: 90
+				},
+				{
+					productId: "OVCX-68-3Y",
+					units: [
+						{
+							maxCount: 5,
+							unitId: "OVCX-68"
+						}
+					],
+					expiredDate: 1852185233000,
+					gracePeriod: 90
+				}
+			],
+			organization: new ObjectId("691c2ec28046a2da1eaf232f"),
+			isActive: true
 		}
-	});
+	]);
 
-	res1 = await db.collection("notifications").deleteMany({ _id: { $in: stringDataRecordIds } });
+	res1 = await db.collection("subscription").updateMany(
+		{ organization: new ObjectId("691c2ec28046a2da1eaf232f") },
+		{
+			$set: {
+				aleRepresentativeNames: {
+					list: ["dev"]
+				},
+				aleRepresentativeEmails: {
+					list: ["tma_dev@ovng.com"]
+				},
+				partnerName: "",
+				partnerCRDID: "",
+				partnerContactName: "",
+				partnerContactEmail: "",
+				expectedDuration: 90,
+				allowedDevices: 10000,
+				newAllowedDevices: 0,
+				businessArgument: "",
+				startDate: "2025-09-10",
+				isRAPRequested: false,
+				isRAPApproved: false,
+				type: "PAID",
+				status: "UNDER_TEASER",
+				approvalStatus: "APPROVED",
+				organization: new ObjectId("691c2ec28046a2da1eaf232f"),
+				endDate: "2028-09-10",
+				licenseMode: "CAPEX",
+				newEndDate: null,
+				plmNotes: "AUTO Approved"
+			}
+		}
+	);
+	*/
 
-	functions.writeToAFile({ res: stringDataRecordIds, res1 });
+	const devicedynamicattributeIndexes = await db.collection("devicedynamicattribute").indexes();
+	console.log(devicedynamicattributeIndexes);
+	
+
+	functions.writeToAFile({ res, res1 });
 
 	// Tạo 1 VC of 2
 	/*
 	let res = await db
 		.collection("device")
-		.find({ serialNumber: { $in: ["ONDEVS0212N1", "ONDEVS0212N2"] } })
+		.find({ serialNumber: { $in: ["ONDEVS0212N0001", "ONDEVS0212N0002"] } })
 		.limit(10)
 		.sort({ createdAt: -1 })
 		.toArray();
 
 	let res1 = await db
 		.collection("devicedynamicattribute")
-		.find({ serialNumber: { $in: ["ONDEVS0212N1", "ONDEVS0212N2"] } })
+		.find({ serialNumber: { $in: ["ONDEVS0212N0001", "ONDEVS0212N0002"] } })
 		.limit(10)
 		.sort({ createdAt: -1 })
 		.toArray();
 
 	let res2 = await db.collection("device").updateMany(
-		{ serialNumber: { $in: ["ONDEVS0212N1", "ONDEVS0212N2"] } },
+		{ serialNumber: { $in: ["ONDEVS0212N0001", "ONDEVS0212N0002"] } },
 		{
 			$set: {
 				calculatedMacAddress: "02:12:24:FF:FF:01",
-				vcSerialNumber: "ONDEVS0212N1"
+				vcSerialNumber: "ONDEVS0212N0001"
 			}
 		}
 	);
 
 	let res3 = await db.collection("devicedynamicattribute").updateMany(
-		{ serialNumber: { $in: ["ONDEVS0212N1"] } },
+		{ serialNumber: { $in: ["ONDEVS0212N0001"] } },
 		{
 			$set: {
 				modelName: "OS6860E-24",
@@ -97,7 +210,7 @@ const dynamicFunction = async (db) => {
 				chassisInfo: [
 					{
 						macAddress: "02:12:24:FF:FF:02",
-						serialNumber: "ONDEVS0212N2",
+						serialNumber: "ONDEVS0212N0002",
 						modelName: "OS6860E-24",
 						role: "master",
 						partNumber: "903708-90",
@@ -105,7 +218,7 @@ const dynamicFunction = async (db) => {
 					},
 					{
 						macAddress: "02:12:24:FF:FF:01",
-						serialNumber: "ONDEVS0212N1",
+						serialNumber: "ONDEVS0212N0001",
 						modelName: "OS6860E-24",
 						role: "slave",
 						partNumber: "903708-90",
@@ -116,13 +229,13 @@ const dynamicFunction = async (db) => {
 				deviceRole: "slave",
 				partNumber: "903708-90",
 				vcMacAddress: "02:12:24:FF:FF:02",
-				vcSerialNumber: "ONDEVS0212N1"
+				vcSerialNumber: "ONDEVS0212N0001"
 			}
 		}
 	);
 
 	let res4 = await db.collection("devicedynamicattribute").updateMany(
-		{ serialNumber: { $in: ["ONDEVS0212N2"] } },
+		{ serialNumber: { $in: ["ONDEVS0212N0002"] } },
 		{
 			$set: {
 				modelName: "OS6860E-24",
@@ -133,7 +246,7 @@ const dynamicFunction = async (db) => {
 				deviceRole: "master",
 				partNumber: "903708-90",
 				vcMacAddress: "02:12:24:FF:FF:02",
-				vcSerialNumber: "ONDEVS0212N1"
+				vcSerialNumber: "ONDEVS0212N0001"
 			}
 		}
 	);
@@ -153,39 +266,43 @@ const onboardDevices = async (db) => {
 	if (yy < 10) yy = "0" + yy;
 
 	const generatedDeviceInfo = (serialNumber, sequenceNumber, isApDevice) => {
-		// Custom with the format "xx"
-		if (sequenceNumber < 10) sequenceNumber = "0" + sequenceNumber;
+		// Custom with the format "xxxx"
+		sequenceNumber = String(sequenceNumber).padStart(4, "0");
 
 		// Now calculate and return
 		return {
 			modelName: isApDevice ? "OAW-AP1201" : "OS6860E-P48",
 			currentRunningSoftwareVersion: isApDevice ? "4.0.6.7" : "8.10.38.R01",
 
-			macAddress: `${dd}:${mm}:${yy}:FF:FF:${sequenceNumber}`, // dd:mm:yy:[FF:FF]:stt
-			bleMac: `${dd}:${mm}:${yy}:FF:FF:${sequenceNumber}`, // dd:mm:yy:[FF:FF]:stt
-			ipv4Address: `1${dd}.1${mm}.1${yy}.1${sequenceNumber}`, // 1dd:1mm:1yy:1stt
+			macAddress: `${dd}:${mm}:${yy}:FF:${sequenceNumber[0]}${sequenceNumber[1]}:${sequenceNumber[2]}${sequenceNumber[3]}`, // dd:mm:yy:[FF]:stt:stt
+			bleMac: `${dd}:${mm}:${yy}:FF:${sequenceNumber[0]}${sequenceNumber[1]}:${sequenceNumber[2]}${sequenceNumber[3]}`, // dd:mm:yy:[FF]:stt:stt
+			ipv4Address: `1${dd}.1${mm}.1${sequenceNumber[0]}${sequenceNumber[1]}.1${sequenceNumber[2]}${sequenceNumber[3]}`, // 1dd:1mm:1stt:1stt
 			name: `Device ${serialNumber}`,
 
 			lastHeartBeat: Math.floor(new Date().getTime() / 1000.0),
 			activationStatus: "OV Managed",
-			deviceManaged: true
+			deviceManaged: true,
 		};
 	};
 
 	const serialNumberRegex = `ONDEVS${dd}${mm}N`; // Format: 'ONDEVS' + ddmm + 'N' ('ONDEVS': ON DEVICE, 'N': NUMBER)
-	const isApDevice = false;
-	const numberOfDevices = 100;
+	const isApDevice = true;
+	const numberOfDevices = 7001;
 	const promises = [];
 
-	for (let i = 1; i <= numberOfDevices; i++) {
-		const serialNumber = serialNumberRegex + i;
+	for (let i = 0; i < numberOfDevices; i++) {
+		const serialNumber = serialNumberRegex + String(i).padStart(4, "0");
 		promises.push(
 			db.collection("devicedynamicattribute").updateMany(
-				{ serialNumber: { $in: [serialNumber] } },
 				{
-					$set: generatedDeviceInfo(serialNumber, i, isApDevice)
-				}
-			)
+					serialNumber: {
+						$in: [serialNumber],
+					},
+				},
+				{
+					$set: generatedDeviceInfo(serialNumber, i, isApDevice),
+				},
+			),
 		);
 	}
 
@@ -197,15 +314,26 @@ const fakeOnDevice = (db) => {
 	const intervalFunc = async () => {
 		let res = await db.collection("devicedynamicattribute").updateMany(
 			{
-				$or: [{ serialNumber: { $regex: "ONDEVS" } }, { serialNumber: { $regex: "NEIGHBORAPS" } }]
+				$or: [
+					{
+						serialNumber: {
+							$regex: "ONDEVS",
+						},
+					},
+					{
+						serialNumber: {
+							$regex: "NEIGHBORAPS",
+						},
+					},
+				],
 			},
 			{
 				$set: {
 					lastHeartBeat: Math.floor(new Date().getTime() / 1000.0),
 					deviceManaged: true,
-					activationStatus: "OV Managed"
-				}
-			}
+					activationStatus: "OV Managed",
+				},
+			},
 		);
 		functions.writeToAFile({ res });
 		console.log("Run! " + Math.floor(new Date().getTime()));
@@ -272,12 +400,16 @@ const fakeOnDevice = (db) => {
  */
 const deleteOrderAndLicensesInOrder = async (db) => {
 	const data = {
-		orderId: "OVC-202304000454"
+		orderId: "OVC-202304000454",
 	};
 
-	const resDeleteOrder = await db.collection("order").deleteMany({ orderId: data.orderId });
+	const resDeleteOrder = await db.collection("order").deleteMany({
+		orderId: data.orderId,
+	});
 	console.log("resDeleteOrder", resDeleteOrder);
-	const resDeleteLicenses = await db.collection("license").deleteMany({ orderId: data.orderId });
+	const resDeleteLicenses = await db.collection("license").deleteMany({
+		orderId: data.orderId,
+	});
 	console.log("resDeleteLicenses", resDeleteLicenses);
 };
 
@@ -285,25 +417,36 @@ const deleteOrderAndLicensesInOrder = async (db) => {
  * đổi license và device thành trạng thái đang đợi SM call webhook sau khi OVNG gọi SM để activate license
  * @param {*} db
  */
-const changeLicenseAndDeviceStatusToTheTimeJustRequestActivation = async (db) => {
+const changeLicenseAndDeviceStatusToTheTimeJustRequestActivation = async (
+	db,
+) => {
 	// data là những field sẽ thay đổi tùy license và device
 	const data = {
 		licenseId: "93bedb27-58e5-4668-bcaf-35636776c159",
 		licenseIdMongo: new ObjectId("650ac8568afd3900e87259f2"),
-		serialNumber: "TRONGTEST002"
+		serialNumber: "TRONGTEST002",
 	};
 
-	const resUpdateLicense = await db.collection("license").updateMany({ licenseId: data.licenseId }, { $set: { status: "BEING_BOUND" } });
+	const resUpdateLicense = await db.collection("license").updateMany(
+		{ licenseId: data.licenseId },
+		{
+			$set: {
+				status: "BEING_BOUND",
+			},
+		},
+	);
 	console.log("resUpdateLicense", resUpdateLicense);
 	const resUpdateDevice = await db.collection("device").updateMany(
-		{ serialNumber: data.serialNumber },
+		{
+			serialNumber: data.serialNumber,
+		},
 		{
 			$set: {
 				license: data.licenseIdMongo,
 				licenseStatus: "BEING_LICENSED",
-				markPremium: true
-			}
-		}
+				markPremium: true,
+			},
+		},
 	);
 	console.log("resUpdateDevice", resUpdateDevice);
 };
@@ -320,7 +463,7 @@ const changeLicenseAndDeviceStatusToTheTimeBindSuccessful = async (db) => {
 		startDate: "2023-09-20",
 		endDate: "2025-09-20",
 		gracePeriod: 30,
-		serialNumber: "TRONGTEST002"
+		serialNumber: "TRONGTEST002",
 	};
 
 	const resUpdateLicense = await db.collection("license").updateMany(
@@ -332,20 +475,22 @@ const changeLicenseAndDeviceStatusToTheTimeBindSuccessful = async (db) => {
 				state: "active",
 				status: "BOUND_IN_OPERATION_PERIOD",
 				gracePeriod: data.gracePeriod,
-				associateStatus: "BINDING_SUCCESS" // => chỗ này đúng ra sẽ là BINDING_SUCCESS, trên system dev mà ko chạy SM Simulator thì sẽ là BINDING_FAIL
-			}
-		}
+				associateStatus: "BINDING_SUCCESS", // => chỗ này đúng ra sẽ là BINDING_SUCCESS, trên system dev mà ko chạy SM Simulator thì sẽ là BINDING_FAIL
+			},
+		},
 	);
 	console.log("resUpdateLicense", resUpdateLicense);
 	const resUpdateDevice = await db.collection("device").updateMany(
-		{ serialNumber: data.serialNumber },
+		{
+			serialNumber: data.serialNumber,
+		},
 		{
 			$set: {
 				license: data.licenseIdMongo,
 				licenseStatus: "LICENSED",
-				markPremium: true
-			}
-		}
+				markPremium: true,
+			},
+		},
 	);
 	console.log("resUpdateDevice", resUpdateDevice);
 };
@@ -354,11 +499,14 @@ const changeLicenseAndDeviceStatusToTheTimeBindSuccessful = async (db) => {
  * đổi license thành trạng thái ban đầu khi chưa active, chưa bind gì cả
  * @param {*} db
  */
-const changeLicenseStatusToTheTimeNotActivateNotBindToEachOther = async (db, licenses) => {
+const changeLicenseStatusToTheTimeNotActivateNotBindToEachOther = async (
+	db,
+	licenses,
+) => {
 	for (let i = 0; i < licenses.length; i++) {
 		// data là những field sẽ thay đổi tùy license
 		const data = {
-			licenseId: licenses[i].licenseId
+			licenseId: licenses[i].licenseId,
 		};
 
 		const resUpdateLicense = await db.collection("license").updateMany(
@@ -370,12 +518,14 @@ const changeLicenseStatusToTheTimeNotActivateNotBindToEachOther = async (db, lic
 					state: "idle",
 					status: "AVAILABLE_NEVER_USED",
 					gracePeriod: 0,
-					associateStatus: null
-				}
-			}
+					associateStatus: null,
+				},
+			},
 		);
 
-		functions.writeToAFile("---------resUpdateLicense: " + licenses[i].licenseId);
+		functions.writeToAFile(
+			"---------resUpdateLicense: " + licenses[i].licenseId,
+		);
 		functions.writeToAFile(resUpdateLicense);
 	}
 };
@@ -384,25 +534,32 @@ const changeLicenseStatusToTheTimeNotActivateNotBindToEachOther = async (db, lic
  * đổi device thành trạng thái ban đầu khi chưa bind gì cả
  * @param {*} db
  */
-const changeDeviceStatusToTheTimeNotActivateNotBindToEachOther = async (db, devices) => {
+const changeDeviceStatusToTheTimeNotActivateNotBindToEachOther = async (
+	db,
+	devices,
+) => {
 	for (let i = 0; i < devices.length; i++) {
 		// data là những field sẽ thay đổi tùy device
 		const data = {
-			serialNumber: devices[i].serialNumber
+			serialNumber: devices[i].serialNumber,
 		};
 
 		const resUpdateDevice = await db.collection("device").updateMany(
-			{ serialNumber: data.serialNumber },
+			{
+				serialNumber: data.serialNumber,
+			},
 			{
 				$set: {
 					license: null,
 					licenseStatus: "UNLICENSED",
-					markPremium: false
-				}
-			}
+					markPremium: false,
+				},
+			},
 		);
 
-		functions.writeToAFile("---------resUpdateDevice: " + devices[i].serialNumber);
+		functions.writeToAFile(
+			"---------resUpdateDevice: " + devices[i].serialNumber,
+		);
 		functions.writeToAFile(resUpdateDevice);
 	}
 };
