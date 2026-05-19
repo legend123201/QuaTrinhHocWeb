@@ -3,7 +3,7 @@
 - Commit message thì vẫn nên có cả description cho rõ ràng.
 */
 
-const s = 'DOOPL-795 Update the Pushy payload data';
+const s = 'OVNG-9898 Fix review code'; 
 
 const result = s
 	.replaceAll(' - ', '-')

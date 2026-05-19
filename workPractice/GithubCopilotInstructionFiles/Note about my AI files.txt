@@ -1,0 +1,31 @@
+# ================ When expose APIs as a BE dev:
+- 1st step: Expose the APIs quickly so UI can integrate its.
+=> Use: expose-api-quickly.agent.md 
+
+- 2nd step: Define policies required for each API.
+=> Use: ???
+
+- 3rd step: Add body request validation.
+=> Use: body-request-validation.agent.md
+
+- 4th step: Add audit log.
+=> Use: audit-log.agent.md
+
+- 5th step: Add API document.
+=> Use: api-doc.agent.md
+
+
+# ================ When working with Youtrack:
+- Copy normal story.
+=> Use: story-copy.agent.md
+
+- Copy RBAC/Audit log/API doc story.
+=> Use: rbac-auditlog-apidoc-story-copy.agent.md
+
+
+# ================ When doing code review: 
+=> Use: code-review.prompt
+
+
+# ================ When fixing bug:
+=> Use: fix-bug.agent.md

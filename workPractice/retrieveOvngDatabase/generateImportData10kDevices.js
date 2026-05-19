@@ -14,10 +14,10 @@ const bodyData = {
 // 	});
 // }
 
-for (let i = 0; i < 7000; i++) {
+for (let i = 0; i < 3; i++) {
 	bodyData.devices.push({
-		serialNumber: `ONDEVS2411N${String(i).padStart(4, "0")}`,
-		deviceFamily: 'AP',
+		serialNumber: `ONDEVS1505N${String(i).padStart(4, "0")}`,
+		deviceFamily: 'AP', // "AP" | "AOS"
 	});
 }
 

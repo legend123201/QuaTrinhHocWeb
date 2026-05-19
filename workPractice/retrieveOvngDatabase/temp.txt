@@ -1,1 +1,9 @@
-{}
+{
+	"res": {
+		"acknowledged": true,
+		"modifiedCount": 25,
+		"upsertedId": null,
+		"upsertedCount": 0,
+		"matchedCount": 25
+	}
+}

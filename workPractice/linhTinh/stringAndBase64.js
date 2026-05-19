@@ -32,4 +32,4 @@ console.log(stringToBase64("0IZBSBd7Bq6UaxvRZ9JTs18sGkYuoc857XuqK6Dn"));
 console.log(base64ToString("NGQyMDhjZDYtYzgwNS00Nzk1LTkyZTktM2YxZTA4YmRmNGYz")); // admin
 console.log(base64ToString("OWFkZjg1YWUtNzExZC00ZmQyLWEzZWQtMDA3MmNhODFlYTA1")); // supporter
 
-console.log(base64ToString("Y2dMd01JKkt4WEZuTkJldW0yVyE="));
+console.log("x" + base64ToString("M2M1ZWRlZWMtNWM2Ni0xMWVlLThjOTktMDI0MmFjMTIwMDAy") + "x");

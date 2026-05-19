@@ -24,9 +24,9 @@ async function main() {
 		console.log("Connected successfully to server");
 		const db = await client.db(dbName);
 
-		await dynamicFunction(db);
+		// await dynamicFunction(db);
 		// await onboardDevices(db);
-		// fakeOnDevice(db); // Xài hàm này thì nhớ comment dòng code "client.close();", ko xài thì un-comment lại
+		fakeOnDevice(db); // Xài hàm này thì nhớ comment dòng code "client.close();", ko xài thì un-comment lại
 
 		// await deleteOrderAndLicensesInOrder(db);
 		// await changeDeviceStatusToTheTimeNotActivateNotBindToEachOther(db, devicesInOrg);
@@ -36,7 +36,7 @@ async function main() {
 	} catch (error) {
 		console.log(error);
 	} finally {
-		client.close();
+		// client.close();
 	}
 }
 
@@ -47,132 +47,12 @@ async function main() {
 const dynamicFunction = async (db) => {
 	let res, res1, res2, res3, res4;
 
-	/*
-	res = await db.collection("subscriptionlicense").insertMany([
-		{
-			coterm: true,
-			subscriptionId: "OVCX-2025OF9999",
-			activationCode: "235dfa83-8536-348c-ae7e-bd2952449999",
-			expiredDate: 1852185233000,
-			activationDate: 1757492847387,
-			gracePeriod: 3,
-			licenseType: "Base",
-			licenseConsumed: [
-				{
-					consumed: {
-						"OVCX-68": 0,
-						"OVCX-69": 0,
-						"OVCX-APH": 0,
-						"OVCX-65": 0,
-						"OVCX-APL": 0,
-						"OVCX-63": 0,
-						"OVCX-64": 0,
-						"OVCX-99": 0
-					}
-				}
-			],
-			orderedLicenses: [],
-			dlLicenses: [
-				{
-					productId: "OVCX-APH-3Y",
-					units: [
-						{
-							maxCount: 5,
-							unitId: "OVCX-APH"
-						}
-					],
-					expiredDate: 1852185233000,
-					gracePeriod: 90
-				},
-				{
-					productId: "OVCX-APL-3Y",
-					units: [
-						{
-							maxCount: 5,
-							unitId: "OVCX-APL"
-						}
-					],
-					expiredDate: 1852185233000,
-					gracePeriod: 90
-				},
-				{
-					productId: "OVCX-64-3Y",
-					units: [
-						{
-							maxCount: 5,
-							unitId: "OVCX-64"
-						}
-					],
-					expiredDate: 1852185233000,
-					gracePeriod: 90
-				},
-				{
-					productId: "OVCX-99-3Y",
-					units: [
-						{
-							maxCount: 5,
-							unitId: "OVCX-99"
-						}
-					],
-					expiredDate: 1852185233000,
-					gracePeriod: 90
-				},
-				{
-					productId: "OVCX-68-3Y",
-					units: [
-						{
-							maxCount: 5,
-							unitId: "OVCX-68"
-						}
-					],
-					expiredDate: 1852185233000,
-					gracePeriod: 90
-				}
-			],
-			organization: new ObjectId("691c2ec28046a2da1eaf232f"),
-			isActive: true
-		}
-	]);
-
-	res1 = await db.collection("subscription").updateMany(
-		{ organization: new ObjectId("691c2ec28046a2da1eaf232f") },
-		{
-			$set: {
-				aleRepresentativeNames: {
-					list: ["dev"]
-				},
-				aleRepresentativeEmails: {
-					list: ["tma_dev@ovng.com"]
-				},
-				partnerName: "",
-				partnerCRDID: "",
-				partnerContactName: "",
-				partnerContactEmail: "",
-				expectedDuration: 90,
-				allowedDevices: 10000,
-				newAllowedDevices: 0,
-				businessArgument: "",
-				startDate: "2025-09-10",
-				isRAPRequested: false,
-				isRAPApproved: false,
-				type: "PAID",
-				status: "UNDER_TEASER",
-				approvalStatus: "APPROVED",
-				organization: new ObjectId("691c2ec28046a2da1eaf232f"),
-				endDate: "2028-09-10",
-				licenseMode: "CAPEX",
-				newEndDate: null,
-				plmNotes: "AUTO Approved"
-			}
-		}
+	res = await db.collection("device").updateMany(
+		{ serialNumber: { $in: ["12542516124", "SSZ220200073", "TESTDEVICE003", "U5647865", "U5644789", "U5688788", "12542214"] } },
+		{ $set: { rapMgmtSystem: "OVTX", ovtxVpnSettingId: "WrE0qrnxFb" } },
 	);
-	*/
 
-	const devicedynamicattributeIndexes = await db.collection("devicedynamicattribute").indexes();
-	console.log(devicedynamicattributeIndexes);
-	
-
-	functions.writeToAFile({ res, res1 });
+	functions.writeToAFile({ res, res1, res2, res3, res4 });
 
 	// Tạo 1 VC of 2
 	/*
@@ -286,8 +166,8 @@ const onboardDevices = async (db) => {
 	};
 
 	const serialNumberRegex = `ONDEVS${dd}${mm}N`; // Format: 'ONDEVS' + ddmm + 'N' ('ONDEVS': ON DEVICE, 'N': NUMBER)
-	const isApDevice = true;
-	const numberOfDevices = 7001;
+	const isApDevice = false;
+	const numberOfDevices = 3;
 	const promises = [];
 
 	for (let i = 0; i < numberOfDevices; i++) {
