@@ -24,7 +24,7 @@
 
 
 # ================ When doing code review: 
-=> Use: code-review.prompt
+=> Use: code-review.agent.md
 
 
 # ================ When fixing bug:

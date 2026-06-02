@@ -1,0 +1,65 @@
+---
+applyTo: '**/*.js'
+---
+# Testing Instructions
+
+TLDR: Every behavioral change gets tests (happy + at least one failure path). Prefer integration (route → policy → service) over shallow unit mocks. Never hit real external services.
+
+## Scope & Priorities
+1. Integration: Use Supertest (or equivalent) against the running Sails app.
+2. Service logic: Unit test only if complex branching or pure computation.
+3. Regression: Reproduce bug with a failing test before fixing.
+4. Contracts: Assert HTTP status, payload shape, and critical fields (not every field unless required by contract).
+
+## Directory Layout (convention)
+test/
+  integration/<domain>/<entity>.spec.js
+  unit/<domain>/<service>.spec.js
+
+## Required Cases (per new/changed endpoint)
+- Happy path (200/201/204).
+- Validation failure (400) via policy (e.g., missing required field).
+- Auth or permission rejection (401 or 403) when applicable.
+- Edge pagination (limit > max ⇒ clamped / rejected as per policy) if paginated.
+- Batch partial (207) when introducing partial success logic.
+
+## Error Field Backward Compatibility
+Legacy endpoints that historically returned `error_code` must still expose it until versioned. Add/update a test asserting presence of legacy field plus (optionally) new `errorCode` if migration approved.
+
+## Patterns
+Arrange → Act → Assert; one logical assertion group per test. Use descriptive `it("should <do thing>")` messages.
+
+## Test Data
+- Prefer factory helpers / builders over hard-coded sprawling fixtures.
+- Clean up created DB entities (or use isolated database / transaction rollback if configured).
+
+## Stubbing & External IO
+- Stub outbound HTTP / message bus / file system. No real network calls.
+- Time-based logic: inject clock or use small fake timers (avoid large waits > 200ms).
+
+## Assertions
+- Status code is correct (no 200 for create ⇒ expect 201, etc.).
+- Success shape: `{ status, message, data }` (if body present).
+- Error shape: includes legacy field(s) as required.
+- No stack traces or internal driver errors in body.
+
+## Prohibited / Red Flags
+- Sleeping (`setTimeout`) to “wait” for async—poll or inject hooks.
+- Depending on test execution order.
+- Large random data generators without seeding (flaky).
+- Snapshot testing of large JSON that frequently changes (high maintenance).
+
+## Performance in Tests
+- Keep each test < 500ms; investigate slower ones (DB indices? redundant setup?).
+- Parallelize independent describe blocks only if isolation guaranteed.
+
+## When to Ask Before Writing Tests
+- Unclear expected failure status (400 vs 422 vs 409).
+- Mixed legacy/new error fields ambiguity.
+- Missing policy yet validation required.
+- Required seed data / reference data unspecified.
+
+## Developer Defense Link
+In PR body: list new/changed tests + rationale for any test you deliberately skipped (with `// JUSTIFICATION:` inside test file if rule exception).
+
+Keep tests minimal, deterministic, and contract-focused.
