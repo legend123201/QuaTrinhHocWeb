@@ -3,7 +3,7 @@
 - Commit message thì vẫn nên có cả description cho rõ ràng.
 */
 
-const s = 'OVNG-9898 Fix review code'; 
+const s = 'OVNG-24815-24816 Support the action stop and reExecute Script execution'; 
 
 const result = s
 	.replaceAll(' - ', '-')
